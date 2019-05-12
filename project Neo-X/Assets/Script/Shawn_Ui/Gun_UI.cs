@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gun : MonoBehaviour
+public class Gun_UI : MonoBehaviour
 {
     public Transform muzzle;
-    public Projectile projectile;
+    public Projectile_UI projectile;
     public float msBetweenShots = 100;
     public float muzzleVelocity = 35;
 
@@ -17,7 +17,7 @@ public class Gun : MonoBehaviour
         if (Time.time > nextShotTime)
         {
             nextShotTime = Time.time + msBetweenShots / 1000;
-            Projectile newProjectile = Instantiate(projectile, muzzle.position, muzzle.rotation) as Projectile;
+            Projectile_UI newProjectile = Instantiate(projectile, muzzle.position, muzzle.rotation) as Projectile_UI;
             newProjectile.SetSpeed(muzzleVelocity);
         }
     }

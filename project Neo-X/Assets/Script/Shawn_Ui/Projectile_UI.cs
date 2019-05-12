@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class Projectile_UI : MonoBehaviour
 {
 
     public LayerMask collisionMask;

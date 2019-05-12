@@ -20,7 +20,7 @@ public class LivingEntity : MonoBehaviour, IDamageable
         if (health <= 0 && !dead)
         {
             Die();
-            FindObjectOfType<GameManager>().EndGame();
+            FindObjectOfType<GameManager_UI>().EndGame();
         }
     }
 

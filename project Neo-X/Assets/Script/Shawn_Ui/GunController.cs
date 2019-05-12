@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class GunController : MonoBehaviour
 {
     public Transform weaponHold;
-    public Gun startingGun;
-    Gun equippedGun;
+    public Gun_UI startingGun;
+    Gun_UI equippedGun;
 
     void Start()
     {
@@ -17,13 +17,13 @@ public class GunController : MonoBehaviour
         }
     }
 
-    public void EquipGun(Gun gunToEquip)
+    public void EquipGun(Gun_UI gunToEquip)
     {
         if (equippedGun != null)
         {
             Destroy(equippedGun.gameObject);
         }
-        equippedGun = Instantiate(gunToEquip, weaponHold.position, weaponHold.rotation) as Gun;
+        equippedGun = Instantiate(gunToEquip, weaponHold.position, weaponHold.rotation) as Gun_UI;
         equippedGun.transform.parent = weaponHold;
     }
 

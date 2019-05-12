@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class GameManager_UI : MonoBehaviour
 {
     public bool startPlaying;
 
