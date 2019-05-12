@@ -1,9 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager {
+    //UI System
+    public bool startPlaying;
 
+    public string levelName;
+
+
+    bool gameHasEnded = false;
+    //UI System
     public event System.Action<Player> OnLocalPlayerJoined;
     private GameObject gameObject;
     private static GameManager m_instance;
@@ -45,6 +53,18 @@ public class GameManager {
         }
 
     }
+
+    public void EndGame()//UI System By Lu
+    {
+        if (gameHasEnded == false)
+        {
+            gameHasEnded = true;
+            Debug.Log("game over");
+            SceneManager.LoadScene(levelName);
+        }
+
+    }
+
 }
 
 

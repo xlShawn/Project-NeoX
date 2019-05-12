@@ -4,21 +4,21 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(PlayerController))]
-[RequireComponent(typeof(GunController))]
-public class Player_UI : LivingEntity
+[RequireComponent(typeof(GunController_UI))]
+public class Player_UI : LivingEntity_UI
 {
 
     public float moveSpeed = 5;
 
     Camera viewCamera;
     PlayerController controller;
-    GunController gunController;
+    GunController_UI gunController;
 
     protected override void Start()
     {
         base.Start();
         controller = GetComponent<PlayerController>();
-        gunController = GetComponent<GunController>();
+        gunController = GetComponent<GunController_UI>();
         viewCamera = Camera.main;
     }
 
