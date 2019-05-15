@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2730390817666700037}
   - component: {fileID: 1075594290413286164}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: Bullet_UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,7 +87,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2926248460024852944}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2629a4e57b9d36742b09639d17e46c09, type: 3}
+  m_Script: {fileID: 11500000, guid: 4aa6761d37c8e4481bb132959f7a9674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   collisionMask:
