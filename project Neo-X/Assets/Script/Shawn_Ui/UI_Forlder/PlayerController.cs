@@ -11,13 +11,15 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rg = GetComponent<Rigidbody>();
-
     }
-
 
     void Update()
     {
-        
+        //pick up
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            print("Hello");
+        }
     }
 
     public void Move(Vector3 _velocity)
@@ -27,9 +29,9 @@ public class PlayerController : MonoBehaviour
 
     public void LookAt(Vector3 lookPoint)
     {
+        
         Vector3 heightCorrectedPoint = new Vector3(lookPoint.x, transform.position.y, lookPoint.z);
         transform.LookAt(heightCorrectedPoint );
-
     }
 
     void FixedUpdate()
