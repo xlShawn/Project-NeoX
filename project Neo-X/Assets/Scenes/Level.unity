@@ -751,10 +751,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 769832331}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8069afadded7a4fbeb92cbf8170296eb, type: 3}
+  m_Script: {fileID: 11500000, guid: 391b1f5eac37a4029bcd76b3ed8e663f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 5
+  startingHealth: 0
   moveSpeed: 5
 --- !u!114 &769832337
 MonoBehaviour:
@@ -793,11 +793,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 769832331}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eff47e8fb9f34c544822de9fc5a9edc6, type: 3}
+  m_Script: {fileID: 11500000, guid: a5228197bc6d14c3d9e79aa815ef885c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   weaponHold: {fileID: 158441756}
-  startingGun: {fileID: 2141989555}
+  startingGun: {fileID: 4088663411906700810, guid: 0a78f55799e8cac46978eae09a6f7983,
+    type: 3}
 --- !u!1 &1142289356
 GameObject:
   m_ObjectHideFlags: 0
@@ -1104,8 +1105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9939e8fa5ae3d4644ac54ea848005bdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPlaying: 0
-  levelName: Credit
 --- !u!4 &1580387464
 Transform:
   m_ObjectHideFlags: 0
@@ -1363,11 +1362,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb29b50f10d824f2595b67c3267a0646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  muzzle: {fileID: 4583150}
-  projectile: {fileID: 635489210476781258, guid: b0b100c01da824668b524ab044b94e36,
-    type: 3}
-  msBetweenShots: 100
-  muzzleVelocity: 35
 --- !u!114 &2141989556
 MonoBehaviour:
   m_ObjectHideFlags: 0

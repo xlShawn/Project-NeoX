@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LivingEntity : MonoBehaviour, IDamageable
 {
@@ -20,7 +21,8 @@ public class LivingEntity : MonoBehaviour, IDamageable
         if (health <= 0 && !dead)
         {
             Die();
-            FindObjectOfType<GameManager_UI>().EndGame();
+            //FindObjectOfType<GameManager_UI>().EndGame();
+            SceneManager.LoadScene(2);
         }
     }
 
