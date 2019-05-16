@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThirdPersonCamera : MonoBehaviour
-{
+public class ThirdPersonCamera : MonoBehaviour {
     [SerializeField] Vector3 cameraOffset;
     [SerializeField] float damping;
 
@@ -12,13 +11,15 @@ public class ThirdPersonCamera : MonoBehaviour
 
     void Awake() {
         GameManager.Instance.OnLocalPlayerJoined += handleLocalPlayerJoined;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void handleLocalPlayerJoined(Player player) {
         localPlayer = player;
         cameraLookTarget = localPlayer.transform.Find("cameraLookTarget");
 
-        if(cameraLookTarget == null) {
+        if (cameraLookTarget == null) {
             cameraLookTarget = localPlayer.transform;
         }
     }

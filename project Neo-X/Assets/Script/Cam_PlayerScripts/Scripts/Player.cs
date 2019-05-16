@@ -16,10 +16,20 @@ public class Player : MonoBehaviour {
     private MoveController m_moveController;
     public MoveController moveController {
         get {
-            if(m_moveController == null) {
+            if (m_moveController == null) {
                 m_moveController = GetComponent<MoveController>();
             }
             return m_moveController;
+        }
+    }
+
+    private Crosshair m_crosshair;
+    private Crosshair Crosshair {
+        get {
+            if (m_crosshair == null) {
+                m_crosshair = GetComponentInChildren<Crosshair>();
+            }
+            return m_crosshair;
         }
     }
 
@@ -39,6 +49,10 @@ public class Player : MonoBehaviour {
         moveController.Move(direction);
 
         mouseInput.x = Mathf.Lerp(mouseInput.x, playerInput.mouseInput.x, 1f / mouseControl.damping.x);
+        mouseInput.y = Mathf.Lerp(mouseInput.y, playerInput.mouseInput.y, 1f / mouseControl.damping.y);
+
         transform.Rotate(Vector3.up * mouseInput.x * mouseControl.sensitivity.x);
+
+        Crosshair.LookHeight(mouseInput.y * mouseControl.sensitivity.y);
     }
 }
