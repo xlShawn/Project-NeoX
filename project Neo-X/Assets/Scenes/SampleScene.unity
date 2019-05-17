@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.49641287, b: 0.5748173, a: 1}
+  m_IndirectSpecularColor: {r: 0.1802837, g: 0.22571404, b: 0.30692273, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -435,8 +435,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   mouseControl:
-    damping: {x: 5, y: 0}
-    sensitivity: {x: 2, y: 0}
+    damping: {x: 5, y: 2}
+    sensitivity: {x: 2, y: 6}
 --- !u!4 &572406050
 Transform:
   m_ObjectHideFlags: 0
@@ -451,6 +451,7 @@ Transform:
   - {fileID: 473968891}
   - {fileID: 1356941240}
   - {fileID: 1555195400}
+  - {fileID: 1240393699}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -479,6 +480,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gun: {fileID: 1781321504}
+--- !u!1 &1240393698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1240393699}
+  - component: {fileID: 1240393700}
+  m_Layer: 0
+  m_Name: Crosshair
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1240393699
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240393698}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.321, y: 1.49, z: 3.24}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 572406050}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1240393700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240393698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b13a7cfc84ced40dd9d6dd5486b481c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 2800000, guid: e80d9c148db6f4326bf834636004f85b, type: 3}
+  size: 24
+  maxAngle: 95
+  minAngle: -40
 --- !u!1 &1267350373
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,7 +856,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1781321502}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.68, y: 0.82, z: 0}
+  m_LocalPosition: {x: 0.52, y: 0.82, z: 0.59}
   m_LocalScale: {x: 1, y: 1, z: 0.46903}
   m_Children:
   - {fileID: 1267350374}
@@ -829,7 +877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rateOfFire: 0.3
-  projectile: {fileID: 9059253008273821811, guid: b0b100c01da824668b524ab044b94e36,
+  projectile: {fileID: 635489210476781258, guid: b0b100c01da824668b524ab044b94e36,
     type: 3}
   muzzle: {fileID: 0}
   canFire: 0
