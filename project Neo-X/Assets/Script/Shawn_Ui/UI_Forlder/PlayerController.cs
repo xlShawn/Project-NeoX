@@ -15,11 +15,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        //pick up
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            print("Hello");
-        }
+
     }
 
     public void Move(Vector3 _velocity)

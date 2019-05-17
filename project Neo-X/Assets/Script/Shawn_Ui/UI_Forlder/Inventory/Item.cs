@@ -9,7 +9,12 @@ public class Item : MonoBehaviour
     public string description;
     public Sprite icon;
     public bool pickedUp;
+
+    [HideInInspector]
     public bool equipped;
+    [HideInInspector]
+    public bool playersWeapon;
+    public GameObject weapon;
 
     public void Update()
     {

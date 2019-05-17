@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,7 +13,6 @@ public class Inventory : MonoBehaviour
     private int allSlots;
     private int enabledSlots;
     private GameObject[] slot;
-
     public GameObject slotHolder;
 
     void Start()
@@ -48,22 +48,39 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    internal void AddItem()
+    {
+        throw new NotImplementedException();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Items")
+        if (other.tag == "Item" )
         {
+
             GameObject itemPickedUp = other.gameObject;
             Item item = itemPickedUp.GetComponent<Item>();
 
             AddItem(itemPickedUp, item.ID, item.type, item.description, item.icon);
+            
+
+
+
         }
+        
+
     }
 
-    void AddItem(GameObject itemObject, int itemID, string itemType, string itemDescription, Sprite itemIcon)
+
+
+    public void AddItem(GameObject itemObject, int itemID, string itemType, string itemDescription, Sprite itemIcon)
     {
-        for(int i=0; i < allSlots; i++)
+
+        for (int i = 0; i < allSlots; i++)
         {
-            if (slot[i].GetComponent<Slot>().empty){
+        
+            if (slot[i].GetComponent<Slot>().empty)
+            {
                 //add item to slot
                 itemObject.GetComponent<Item>().pickedUp = true;
                 //Item Element 
@@ -72,14 +89,19 @@ public class Inventory : MonoBehaviour
                 slot[i].GetComponent<Slot>().type = itemType;
                 slot[i].GetComponent<Slot>().ID = itemID;
                 slot[i].GetComponent<Slot>().description = itemDescription;
-
+        
                 itemObject.transform.parent = slot[i].transform;
                 itemObject.SetActive(false);
-
+        
                 slot[i].GetComponent<Slot>().updateSlot();
                 slot[i].GetComponent<Slot>().empty = false;
+        
+                return;
             }
-            return;
+        
+        
         }
+        
+
     }
 }
