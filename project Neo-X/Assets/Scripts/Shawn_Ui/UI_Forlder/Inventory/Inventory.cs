@@ -14,6 +14,7 @@ public class Inventory : MonoBehaviour
     private int enabledSlots;
     private GameObject[] slot;
     public GameObject slotHolder;
+    public bool inTrigger;
 
     void Start()
     {
@@ -62,10 +63,6 @@ public class Inventory : MonoBehaviour
             Item item = itemPickedUp.GetComponent<Item>();
 
             AddItem(itemPickedUp, item.ID, item.type, item.description, item.icon);
-            
-
-
-
         }
         
 

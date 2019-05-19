@@ -12,9 +12,35 @@ public class Item : MonoBehaviour
 
     [HideInInspector]
     public bool equipped;
+
     [HideInInspector]
-    public bool playersWeapon;
     public GameObject weapon;
+
+    [HideInInspector]
+    public GameObject weaponManager;
+
+    [HideInInspector]
+    public GameObject playerUI;
+
+    public bool playersWeapon;
+
+
+    public void Start()
+    {
+        weaponManager = GameObject.FindWithTag("WeaponManager");
+        if (!playersWeapon)
+        {
+            int allWeapons = weaponManager.transform.childCount;
+            for (int i = 0; i < allWeapons; i++)
+            {
+                if(weaponManager.transform.GetChild(i).gameObject.GetComponent<Item>().ID == ID)
+                {
+                    weapon = weaponManager.transform.GetChild(i).gameObject;
+                }
+            }
+            
+        }
+    }
 
     public void Update()
     {
@@ -25,12 +51,21 @@ public class Item : MonoBehaviour
         }
     }
 
-    public void ItemUsage()
+    public void ItemUsage()//If there is new Items that need to use, this function should add New type  
     {
+
+        //key
+        if(type == "Key")
+        {
+            DoorScript.doorKey = true;
+            equipped = true;
+        }
 
         //weapon
         if(type == "Weapon")
         {
+
+            weapon.SetActive(true);
             equipped = true;
         }
 

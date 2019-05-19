@@ -9,6 +9,7 @@ public class Player_UI : LivingEntity
 {
 
     public float moveSpeed = 5;
+    public bool weaponEquipment = false;
 
     Camera viewCamera;
     PlayerController controller;
@@ -42,9 +43,13 @@ public class Player_UI : LivingEntity
         }
 
         // Weapon input
-        if (Input.GetMouseButton(0))
+        if(weaponEquipment == true)
         {
-            gunController.Shoot();
+            if (Input.GetMouseButton(0))
+            {
+                gunController.Shoot();
+            }
         }
+        
     }
 }

@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 10993359}
   - component: {fileID: 10993358}
   - component: {fileID: 10993364}
+  - component: {fileID: 10993363}
   m_Layer: 0
   m_Name: Key
   m_TagString: Item
@@ -218,6 +219,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &10993363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10993357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa237f33656f8ec4997ed0a5fffa07d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: 2
+  type: Key
+  description: 
+  icon: {fileID: 21300000, guid: 3e4fcc84a0ac95b429c56452575f6021, type: 3}
+  pickedUp: 0
+  equipped: 0
+  weapon: {fileID: 0}
+  weaponManager: {fileID: 0}
+  playerUI: {fileID: 0}
+  playersWeapon: 0
 --- !u!65 &10993364
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -242,7 +265,7 @@ GameObject:
   - component: {fileID: 158441756}
   m_Layer: 0
   m_Name: Weapon Hold
-  m_TagString: Untagged
+  m_TagString: WeaponManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -343,7 +366,7 @@ GameObject:
   - component: {fileID: 360054246}
   m_Layer: 0
   m_Name: Hinge
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2193,6 +2216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 0
   moveSpeed: 5
+  weaponEquipment: 1
 --- !u!114 &769832337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2250,6 +2274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 436111107}
   slotHolder: {fileID: 436111106}
+  inTrigger: 0
 --- !u!1 &1142289356
 GameObject:
   m_ObjectHideFlags: 0
@@ -2708,14 +2733,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa237f33656f8ec4997ed0a5fffa07d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 0
+  ID: 1
   type: Weapon
   description: Weapon Axes
   icon: {fileID: 21300000, guid: 172774604c1bee84185a69041576525b, type: 3}
   pickedUp: 0
   equipped: 0
-  playersWeapon: 0
   weapon: {fileID: 0}
+  weaponManager: {fileID: 0}
+  playerUI: {fileID: 0}
+  playersWeapon: 0
 --- !u!54 &1969511145
 Rigidbody:
   m_ObjectHideFlags: 0
