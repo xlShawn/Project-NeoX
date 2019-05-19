@@ -9,7 +9,7 @@ public class Player_UI : LivingEntity
 {
 
     public float moveSpeed = 5;
-    public bool weaponEquipment = false;
+    public static bool weaponEquipment = false;
 
     Camera viewCamera;
     PlayerController controller;

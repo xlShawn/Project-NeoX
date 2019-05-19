@@ -2216,7 +2216,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 0
   moveSpeed: 5
-  weaponEquipment: 1
 --- !u!114 &769832337
 MonoBehaviour:
   m_ObjectHideFlags: 0

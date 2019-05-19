@@ -64,7 +64,7 @@ public class Item : MonoBehaviour
         //weapon
         if(type == "Weapon")
         {
-
+            Player_UI.weaponEquipment = true;
             weapon.SetActive(true);
             equipped = true;
         }
