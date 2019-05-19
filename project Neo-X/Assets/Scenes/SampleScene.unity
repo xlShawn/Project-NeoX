@@ -400,7 +400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51c66d60a024a498e85d9daa87e9a59a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraOffset: {x: 0.7, y: 0.8, z: -7}
+  cameraOffset: {x: 0.7, y: 1.82, z: -6.53}
   damping: 5
 --- !u!1 &572406048
 GameObject:
@@ -523,7 +523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b13a7cfc84ced40dd9d6dd5486b481c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 2800000, guid: e80d9c148db6f4326bf834636004f85b, type: 3}
+  image: {fileID: 2800000, guid: a49c40408cdce4f78b214ebd675025b2, type: 3}
   size: 24
   maxAngle: 95
   minAngle: -40
@@ -931,7 +931,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 91cb394f3d20a42708211c372f3c316a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
