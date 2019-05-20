@@ -12,6 +12,7 @@ public class Player : MonoBehaviour {
 
     [SerializeField] float speed;
     [SerializeField] MouseInput mouseControl;
+    public PlayerAim playerAim;
 
     private MoveController m_moveController;
     public MoveController moveController {
@@ -54,5 +55,6 @@ public class Player : MonoBehaviour {
         transform.Rotate(Vector3.up * mouseInput.x * mouseControl.sensitivity.x);
 
         Crosshair.LookHeight(mouseInput.y * mouseControl.sensitivity.y);
+        playerAim.setRotation(mouseInput.y * mouseControl.sensitivity.y);
     }
 }
