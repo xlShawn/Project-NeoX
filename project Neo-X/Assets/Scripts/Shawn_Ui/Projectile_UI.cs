@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class Projectile_UI : MonoBehaviour
 {
-
+    public float timeToLive = 5f;
     public LayerMask collisionMask;
-    float speed = 10;
-    float damage = 1;
+    public float speed = 10f;
+    public float damage = 1f;
 
     public void SetSpeed(float newSpeed)
     {
         speed = newSpeed;
+    }
+
+    void Start()
+    {
+        Destroy(gameObject, timeToLive);
     }
 
     void Update()

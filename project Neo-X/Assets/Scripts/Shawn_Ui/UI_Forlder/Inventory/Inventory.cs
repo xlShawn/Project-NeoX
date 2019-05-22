@@ -64,7 +64,6 @@ public class Inventory : MonoBehaviour
 
             AddItem(itemPickedUp, item.ID, item.type, item.description, item.icon);
         }
-        
 
     }
 

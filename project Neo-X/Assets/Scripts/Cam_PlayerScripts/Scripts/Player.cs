@@ -3,7 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(MoveController))]
-public class Player : MonoBehaviour {
+[RequireComponent(typeof(PlayerController))]
+[RequireComponent(typeof(GunController))]
+public class Player : LivingEntity {
+
+    public static bool weaponEquipment = false;
+    PlayerController controller;
+    GunController gunController;
+    //Shawn Player script ^
+
+
     [System.Serializable]
     public class MouseInput {
         public Vector2 damping;
@@ -37,6 +46,14 @@ public class Player : MonoBehaviour {
     InputController playerInput;
     Vector2 mouseInput;
 
+    protected override void Start()
+    {
+        base.Start();
+        controller = GetComponent<PlayerController>();
+        gunController = GetComponent<GunController>();
+
+    }
+
     // Start is called before the first frame update
     void Awake() {
         playerInput = GameManager.Instance.inputController;
@@ -56,5 +73,17 @@ public class Player : MonoBehaviour {
 
         Crosshair.LookHeight(mouseInput.y * mouseControl.sensitivity.y);
         playerAim.setRotation(mouseInput.y * mouseControl.sensitivity.y);
+
+
+
+        //Weapon Input --Shawn Script
+        if (weaponEquipment == true)
+        {
+            if (Input.GetMouseButton(0))
+            {
+                gunController.Shoot();
+            }
+        }
+
     }
 }

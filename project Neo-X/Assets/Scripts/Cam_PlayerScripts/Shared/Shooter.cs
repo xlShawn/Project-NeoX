@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
-    [SerializeField] float rateOfFire;
+    public float rateOfFire;
     [SerializeField] Projectile projectile;
 
     [HideInInspector]

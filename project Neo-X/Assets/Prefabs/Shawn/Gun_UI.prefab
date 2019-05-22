@@ -162,6 +162,7 @@ MonoBehaviour:
   equipped: 0
   weapon: {fileID: 0}
   weaponManager: {fileID: 0}
+  playerUI: {fileID: 0}
   playersWeapon: 0
 --- !u!1 &3715603262647245732
 GameObject:

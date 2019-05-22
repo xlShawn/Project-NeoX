@@ -9,6 +9,7 @@ public class ThirdPersonCamera : MonoBehaviour {
     Transform cameraLookTarget;
     Player localPlayer;
 
+
     void Awake() {
         GameManager.Instance.OnLocalPlayerJoined += handleLocalPlayerJoined;
         Cursor.visible = false;
