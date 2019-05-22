@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ThirdPersonCamera : MonoBehaviour {
-    [SerializeField] Vector3 cameraOffset;
-    [SerializeField] float damping;
+    public Vector3 cameraOffset;
+    public float damping;
 
     Transform cameraLookTarget;
     Player localPlayer;

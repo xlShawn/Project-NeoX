@@ -7,7 +7,7 @@ public class PauseManu : MonoBehaviour
 
     public static bool GameIsPaused = false;
     public GameObject pauseUI;
-
+     
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.I))
@@ -21,6 +21,8 @@ public class PauseManu : MonoBehaviour
                 Pause();
             }
         }
+
+        
     }
 
     void Resume()
@@ -36,4 +38,5 @@ public class PauseManu : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
+
 }

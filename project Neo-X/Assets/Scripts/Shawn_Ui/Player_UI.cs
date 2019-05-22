@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 [RequireComponent(typeof(PlayerController))]
 [RequireComponent(typeof(GunController))]
 public class Player_UI : LivingEntity
 {
-
+    public Image image;
     public float moveSpeed = 5;
     public static bool weaponEquipment = false;
 
@@ -52,4 +52,5 @@ public class Player_UI : LivingEntity
         }
         
     }
+
 }

@@ -13,21 +13,17 @@ public class Crosshair : MonoBehaviour
     float lookHeight;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            inventoryEnable = !inventoryEnable;
-        }
+        
 
     }
     public void LookHeight(float value) {
         lookHeight += value;
-        if (!inventoryEnable)
+        
+        if (lookHeight > maxAngle || lookHeight < minAngle)
         {
-            if (lookHeight > maxAngle || lookHeight < minAngle)
-            {
-                lookHeight -= value;
-            }
+            lookHeight -= value;
         }
+        
 
     }
 

@@ -32,4 +32,11 @@ public class DoorKey : MonoBehaviour
         }
     }
 
+    private void OnGUI()
+    {
+        if (inTrigger)
+        {
+            GUI.Box(new Rect(0, 60, 200, 25), "Press E tp take key");
+        }
+    }
 }

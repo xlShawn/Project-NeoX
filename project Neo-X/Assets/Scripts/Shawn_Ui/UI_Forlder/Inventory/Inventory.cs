@@ -3,8 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 public class Inventory : MonoBehaviour
 {
     private bool inventoryEnabled;
@@ -37,15 +35,17 @@ public class Inventory : MonoBehaviour
             inventoryEnabled = !inventoryEnabled;
         }
 
-            
-        
-        if(inventoryEnabled == true)
+        if (inventoryEnabled == true)
         {
             inventory.SetActive(true);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
         else
         {
             inventory.SetActive(false);
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 
@@ -58,23 +58,16 @@ public class Inventory : MonoBehaviour
     {
         if (other.tag == "Item" )
         {
-
             GameObject itemPickedUp = other.gameObject;
             Item item = itemPickedUp.GetComponent<Item>();
-
             AddItem(itemPickedUp, item.ID, item.type, item.description, item.icon);
         }
-
     }
-
-
 
     public void AddItem(GameObject itemObject, int itemID, string itemType, string itemDescription, Sprite itemIcon)
     {
-
         for (int i = 0; i < allSlots; i++)
         {
-        
             if (slot[i].GetComponent<Slot>().empty)
             {
                 //add item to slot
@@ -94,10 +87,8 @@ public class Inventory : MonoBehaviour
         
                 return;
             }
-        
-        
+
         }
-        
 
     }
 }
