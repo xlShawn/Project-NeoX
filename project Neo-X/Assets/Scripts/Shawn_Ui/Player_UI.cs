@@ -7,7 +7,6 @@ using UnityEngine.UI;
 [RequireComponent(typeof(GunController))]
 public class Player_UI : LivingEntity
 {
-    public Image image;
     public float moveSpeed = 5;
     public static bool weaponEquipment = false;
 
