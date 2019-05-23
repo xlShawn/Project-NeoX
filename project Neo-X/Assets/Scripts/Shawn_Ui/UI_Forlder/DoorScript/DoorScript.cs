@@ -8,6 +8,7 @@ public class DoorScript : MonoBehaviour
     public bool open;
     public bool close;
 
+    public int KeyID;
     public bool inTrigger;
 
     private void OnTriggerEnter(Collider other)
@@ -18,8 +19,14 @@ public class DoorScript : MonoBehaviour
     {
         inTrigger = false;
     }
+
+    private void Start()
+    {
+        
+    }
     void Update()
     {
+        
         if (inTrigger)
         {
             if (close)
@@ -47,7 +54,7 @@ public class DoorScript : MonoBehaviour
         {
             if (open)
             {
-                var newRot = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0.0f, -90.0f, 0.0f),Time.deltaTime *200);
+                var newRot = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0.0f, -90.0f, 0.0f), Time.deltaTime * 200);
                 transform.rotation = newRot;
             }
             else
@@ -55,6 +62,8 @@ public class DoorScript : MonoBehaviour
                 var newRot = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, 0f, 0f), Time.deltaTime * 200);
             }
         }
+        
+        
     }
     private void OnGUI()
     {

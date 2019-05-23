@@ -6,7 +6,7 @@ using UnityEngine;
 public class DoorKey : MonoBehaviour
 {
     public bool inTrigger;
-
+    public int KeyID;
     private void OnTriggerEnter(Collider other)
     {
         inTrigger = true;
@@ -38,5 +38,9 @@ public class DoorKey : MonoBehaviour
         {
             GUI.Box(new Rect(0, 60, 200, 25), "Press E tp take key");
         }
+    }
+    public void KeyIdentity(int keyID)
+    {
+        KeyID = keyID;
     }
 }
