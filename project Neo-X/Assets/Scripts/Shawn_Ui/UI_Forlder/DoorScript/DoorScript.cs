@@ -8,14 +8,13 @@ public class DoorScript : MonoBehaviour
     public bool open;
     public bool close;
 
-    public int KeyID;
     public bool inTrigger;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider Col)
     {
         inTrigger = true;
     }
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider Col)
     {
         inTrigger = false;
     }

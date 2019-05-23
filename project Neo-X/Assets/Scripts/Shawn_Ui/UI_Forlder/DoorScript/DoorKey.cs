@@ -5,14 +5,13 @@ using UnityEngine;
 
 public class DoorKey : MonoBehaviour
 {
-    public bool inTrigger;
-    public int KeyID;
-    private void OnTriggerEnter(Collider other)
+    public bool inTrigger = false;
+    private void OnTriggerEnter(Collider Col)
     {
         inTrigger = true;
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider Col)
     {
         inTrigger = false;
 
@@ -22,25 +21,22 @@ public class DoorKey : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inTrigger)
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                DoorScript.doorKey = true;
-                Destroy(this.gameObject);
-            }
-        }
+        //if (inTrigger)
+        //{
+        //    if (Input.GetKeyDown(KeyCode.H))
+        //    {
+        //        DoorScript.doorKey = true;
+        //        Destroy(this.gameObject);
+        //    }
+        //}
     }
 
-    private void OnGUI()
-    {
-        if (inTrigger)
-        {
-            GUI.Box(new Rect(0, 60, 200, 25), "Press E tp take key");
-        }
-    }
-    public void KeyIdentity(int keyID)
-    {
-        KeyID = keyID;
-    }
+    //private void OnGUI()
+    //{
+    //    if (inTrigger == true)
+    //    {
+    //        GUI.Box(new Rect(0, 60, 200, 25), "Press h tp take key");
+    //    }
+    //}
+
 }
