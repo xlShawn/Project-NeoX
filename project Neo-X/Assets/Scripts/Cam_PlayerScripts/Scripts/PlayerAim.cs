@@ -22,7 +22,5 @@ public class PlayerAim : MonoBehaviour{
         }
     }
 
-    private void Update() {
-        print(getAngle());
-    }
+
 }
