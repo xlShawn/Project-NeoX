@@ -10,21 +10,22 @@ public class Player_UI : LivingEntity
     public float moveSpeed = 5;
     public static bool weaponEquipment = false;
 
-    Camera viewCamera;
-    PlayerController controller;
+   // Camera viewCamera;
+   // PlayerController controller;
     GunController gunController;
 
     protected override void Start()
     {
         base.Start();
-        controller = GetComponent<PlayerController>();
+        //controller = GetComponent<PlayerController>();
         gunController = GetComponent<GunController>();
-        viewCamera = Camera.main;
+        //viewCamera = Camera.main;
+        
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        // Movement input
+        /*// Movement input
         Vector3 moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
         Vector3 moveVelocity = moveInput.normalized * moveSpeed;
         controller.Move(moveVelocity);
@@ -40,9 +41,11 @@ public class Player_UI : LivingEntity
             //Debug.DrawLine(ray.origin,point,Color.red);
             controller.LookAt(point);
         }
+        */
 
+        PlayerMovement();
         // Weapon input
-        if(weaponEquipment == true)
+        if (weaponEquipment == true)
         {
             if (Input.GetMouseButton(0))
             {
@@ -50,6 +53,13 @@ public class Player_UI : LivingEntity
             }
         }
         
+    }
+    void PlayerMovement()
+    {
+        float hor = Input.GetAxis("Horizontal");
+        float ver = Input.GetAxis("Vertical");
+        Vector3 playerMovement = new Vector3(hor, 0f, ver) * moveSpeed * Time.deltaTime;
+        transform.Translate(playerMovement, Space.Self);
     }
 
 }
