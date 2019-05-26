@@ -63,7 +63,7 @@ public class Player : LivingEntity {
 
     // Update is called once per frame
     void Update() {
-        Vector2 direction = new Vector2(playerInput.vertical * speed, playerInput.horizontal * speed);
+        Vector2 direction = new Vector2(playerInput.vertical * speed, playerInput.horizontal * speed*0.6f);
         moveController.Move(direction);
 
         mouseInput.x = Mathf.Lerp(mouseInput.x, playerInput.mouseInput.x, 1f / mouseControl.damping.x);
