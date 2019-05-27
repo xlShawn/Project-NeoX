@@ -8,6 +8,8 @@ using UnityEngine;
 public class Player : LivingEntity /* Health system*/ {
 
     public static bool weaponEquipment = false;
+    //Animator anim; Tui left this here
+    //anim = getcomponent<Animator>(); Tui left this here
     PlayerController controller;
     GunController gunController;
     //Shawn Player script ^
@@ -24,10 +26,12 @@ public class Player : LivingEntity /* Health system*/ {
     public PlayerAim playerAim;
 
     private MoveController m_moveController;
+
     public MoveController moveController {
         get {
             if (m_moveController == null) {
                 m_moveController = GetComponent<MoveController>();
+                //Anim.play("Run"); Tui left this here
             }
             return m_moveController;
         }
