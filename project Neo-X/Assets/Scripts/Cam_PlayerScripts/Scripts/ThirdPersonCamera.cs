@@ -35,6 +35,6 @@ public class ThirdPersonCamera : MonoBehaviour {
         transform.position = Vector3.Lerp(transform.position, targetPosition, damping * Time.deltaTime);
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, damping * Time.deltaTime);
 
-        print(Input.mousePosition.x + "   " + Input.mousePosition.y);
+        //print(Input.mousePosition.x + "   " + Input.mousePosition.y);
     }
 }

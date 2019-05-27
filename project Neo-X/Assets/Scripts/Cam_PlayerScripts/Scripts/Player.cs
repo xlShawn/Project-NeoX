@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(MoveController))]
 [RequireComponent(typeof(PlayerController))]
 [RequireComponent(typeof(GunController))]
-public class Player : LivingEntity {
+public class Player : LivingEntity /* Health system*/ {
 
     public static bool weaponEquipment = false;
     PlayerController controller;

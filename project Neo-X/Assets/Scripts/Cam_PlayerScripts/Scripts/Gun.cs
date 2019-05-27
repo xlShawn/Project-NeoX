@@ -25,7 +25,7 @@ public class Gun : Shooter {
         Vector3 direction = pointAt.transform.position-origin;
        //direction.y -= 2;
 
-        print(origin);
+        //print(origin);
 
         Debug.DrawRay(origin, direction*10f, Color.green);
     }
