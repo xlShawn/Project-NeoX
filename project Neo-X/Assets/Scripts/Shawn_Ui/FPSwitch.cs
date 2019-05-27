@@ -13,33 +13,33 @@ public class FPSwitch : MonoBehaviour
 
     void Update()
     {
-        if(intoRoom == true)
+
+        if (switchTime == 0)
         {
-            if (switchTime == 0)
-            {
-                switchStop = true;
-            }
-            if (switchStop == false)
+            switchStop = true;
+        }
+        if (switchStop == false)
+        {
+            if (intoRoom == true)
             {
                 if (Input.GetKeyDown(KeyCode.Tab))
                 {
                     SwitchBetweenFutureAndPast = !SwitchBetweenFutureAndPast;
                     switchTime -= 1;
                 }
-                if (SwitchBetweenFutureAndPast == true)
-                {
-                    FutureEnvironment.SetActive(true);
-                    PastEnvironment.SetActive(false);
-                }
-                else
-                {
-                    FutureEnvironment.SetActive(false);
-                    PastEnvironment.SetActive(true);
-                }
             }
+            if (SwitchBetweenFutureAndPast == true)
+            {
+                FutureEnvironment.SetActive(false);
+                PastEnvironment.SetActive(true);
+            }
+        else
+            {
+                
+                FutureEnvironment.SetActive(true);
+                PastEnvironment.SetActive(false);
+            }
+            
         }
-
-
-
     }
 }
