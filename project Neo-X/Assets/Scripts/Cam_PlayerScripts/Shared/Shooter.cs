@@ -31,8 +31,9 @@ public class Shooter : MonoBehaviour
         Instantiate(projectile, muzzle.position, muzzle.rotation);
 
         print("FIRE!"+ Time.time);
-
+       
         canFire = true;
     }
+
 
 }

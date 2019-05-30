@@ -10,10 +10,14 @@ public class Crosshair : MonoBehaviour
     [SerializeField] float minAngle;
     private bool inventoryEnable;
 
+    public Vector2 crosshairPos;
+    public Vector3 screenPosition;
+
+
     float lookHeight;
     void Update()
     {
-        
+        crosshairPos = new Vector2(screenPosition.x, screenPosition.y - lookHeight);
 
     }
     public void LookHeight(float value) {
@@ -28,7 +32,7 @@ public class Crosshair : MonoBehaviour
     }
 
     void OnGUI() {
-        Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
+        screenPosition = Camera.main.WorldToScreenPoint(transform.position);
         screenPosition.y = Screen.height - screenPosition.y;
         GUI.DrawTexture(new Rect(screenPosition.x, screenPosition.y - lookHeight, size, size), image);
     }

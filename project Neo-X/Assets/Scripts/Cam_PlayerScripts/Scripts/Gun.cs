@@ -9,6 +9,18 @@ public class Gun : Shooter {
 
     void Update() {
         raycast();
+
+
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit)) {
+                print("PYOW: " + hit.transform.name);
+            }
+
+        print(Input.mousePosition);
+
+            //Debug.DrawRay(Input.mousePosition);
+        
     }
 
 
