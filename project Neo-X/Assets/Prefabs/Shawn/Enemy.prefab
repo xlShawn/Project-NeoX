@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 1027359545696485475}
   - component: {fileID: 1027359545696485476}
   - component: {fileID: 1027359545696485477}
-  - component: {fileID: 1027359545696485478}
+  - component: {fileID: 2246856091201422052}
+  - component: {fileID: 7301190173423828222}
   - component: {fileID: 1027359545696485479}
   m_Layer: 0
   m_Name: Enemy
@@ -94,7 +95,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1027359545696485478
+--- !u!114 &2246856091201422052
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,11 +104,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 1027359545696485496}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97564ea14f8cb574d9a12f1c53dcb886, type: 3}
+  m_Script: {fileID: 11500000, guid: 43f1c507daabf8d4284fd99cb11fb892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 0
-  refreshRate: 0.25
+  viewRadius: 0
+  viewAngle: 0
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 0
+  visibleTargets: []
+--- !u!114 &7301190173423828222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027359545696485496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c6d30e17e01f1a4ea0709a8de94175e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 5
 --- !u!195 &1027359545696485479
 NavMeshAgent:
   m_ObjectHideFlags: 0
