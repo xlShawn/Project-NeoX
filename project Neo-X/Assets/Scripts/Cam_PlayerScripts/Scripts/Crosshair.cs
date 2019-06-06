@@ -5,7 +5,7 @@ using UnityEngine;
 public class Crosshair : MonoBehaviour
 {
     [SerializeField] Texture2D image;
-    [SerializeField] int size;
+    [SerializeField]public int size;
     [SerializeField] float maxAngle;
     [SerializeField] float minAngle;
     private bool inventoryEnable;

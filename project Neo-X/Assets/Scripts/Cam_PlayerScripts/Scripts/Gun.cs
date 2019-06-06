@@ -6,21 +6,30 @@ using UnityEngine;
 public class Gun : Shooter {
 
     [SerializeField] GameObject pointAt;
+    Crosshair ch; 
 
     void Update() {
         raycast();
 
 
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+
+        Ray ray = Camera.main.ScreenPointToRay(new Vector2(ch.crosshairPos.x+(ch.size/2), Mathf.Lerp(Screen.height, 0, ch.crosshairPos.y/Screen.height)-(ch.size/2)));
             RaycastHit hit;
+        Debug.DrawRay(ray.origin, ray.direction*30f, Color.green);
+        
             if (Physics.Raycast(ray, out hit)) {
-                print("PYOW: " + hit.transform.name);
+                print("Mouse hitting: " + hit.transform.name);
             }
 
-        print(Input.mousePosition);
+        //print(Input.mousePosition);
+        //print(ch.crosshairPos);
 
-            //Debug.DrawRay(Input.mousePosition);
-        
+
+        //print("POS" + ch.crosshairPos);
+
+        //Debug.DrawRay(Input.mousePosition);
+
     }
 
 
@@ -39,7 +48,11 @@ public class Gun : Shooter {
 
         //print(origin);
 
-        Debug.DrawRay(origin, direction*10f, Color.green);
+        //Debug.DrawRay(origin, direction*10f, Color.green);
+    }
+
+   void Start() {
+        ch = FindObjectOfType<Crosshair>();
     }
 
 }

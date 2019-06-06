@@ -6,6 +6,7 @@ public class Shooter : MonoBehaviour
 {
     public float rateOfFire;
     [SerializeField] Projectile projectile;
+    
 
     [HideInInspector]
     public Transform muzzle;
@@ -34,6 +35,7 @@ public class Shooter : MonoBehaviour
        
         canFire = true;
     }
+
 
 
 }
