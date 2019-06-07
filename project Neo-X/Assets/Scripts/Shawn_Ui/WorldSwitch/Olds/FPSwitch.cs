@@ -7,7 +7,7 @@ public class FPSwitch : MonoBehaviour
     public GameObject FutureEnvironment;
     public GameObject PastEnvironment;
     private bool SwitchBetweenFutureAndPast;
-    public int switchTime = 1;
+    public int switchTime = 3;
     private bool switchStop;
     public static bool intoRoom = false;
 
@@ -42,7 +42,7 @@ public class FPSwitch : MonoBehaviour
             }
 
 
-            
+
         }
     }
 }

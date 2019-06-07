@@ -86,6 +86,7 @@ public class EnemyAiFollowPath : LivingEntity
             }
             yield return null;
         }
+        
     }
 
     IEnumerator TurnToFace(Vector3 lookTarget)
