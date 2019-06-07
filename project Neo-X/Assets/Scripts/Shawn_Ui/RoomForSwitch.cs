@@ -11,6 +11,10 @@ public class RoomForSwitch : MonoBehaviour
         {
             FPSwitch.intoRoom = true;
         }
+        if (inRoom == false)
+        {
+            FPSwitch.intoRoom = false;
+        }
     }
 
 

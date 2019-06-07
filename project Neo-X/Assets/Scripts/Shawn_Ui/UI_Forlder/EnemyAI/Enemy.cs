@@ -11,8 +11,7 @@ public class Enemy : LivingEntity
 
     public Transform pathHolder;
 
-
-    private void OnDrawGizmos() // create a waypoint and path line on screen
+    private void OnDrawGizmos() 
     {
         Vector3 startPosition = pathHolder.GetChild(0).position;
         Vector3 previousPosition = startPosition;
@@ -50,7 +49,6 @@ public class Enemy : LivingEntity
                 if (!dead)
                 {
                     pathfinder.SetDestination(targetPosition);
-
                 }
                 yield return new WaitForSeconds(refreshRate);
             }

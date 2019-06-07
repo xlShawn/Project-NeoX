@@ -7,7 +7,7 @@ public class FPSwitch : MonoBehaviour
     public GameObject FutureEnvironment;
     public GameObject PastEnvironment;
     private bool SwitchBetweenFutureAndPast;
-    public int switchTime = 3;
+    public int switchTime = 1;
     private bool switchStop;
     public static bool intoRoom = false;
 
@@ -22,23 +22,26 @@ public class FPSwitch : MonoBehaviour
         {
             if (intoRoom == true)
             {
+
                 if (Input.GetKeyDown(KeyCode.Tab))
                 {
                     SwitchBetweenFutureAndPast = !SwitchBetweenFutureAndPast;
-                    switchTime -= 1;
+                    if (SwitchBetweenFutureAndPast == true)
+                    {
+                        FutureEnvironment.SetActive(false);
+                        PastEnvironment.SetActive(true);
+                    }
+                    else
+                    {
+
+                        FutureEnvironment.SetActive(true);
+                        PastEnvironment.SetActive(false);
+                    }
+                    return;
                 }
             }
-            if (SwitchBetweenFutureAndPast == true)
-            {
-                FutureEnvironment.SetActive(false);
-                PastEnvironment.SetActive(true);
-            }
-        else
-            {
-                
-                FutureEnvironment.SetActive(true);
-                PastEnvironment.SetActive(false);
-            }
+
+
             
         }
     }
