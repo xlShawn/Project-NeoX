@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Gun_UI : MonoBehaviour
 {
+    // as his Shooter;
     public Transform muzzle;
     public Projectile_UI projectile;
     public float msBetweenShots = 100;

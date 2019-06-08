@@ -9,6 +9,11 @@ public class Gun : Shooter {
     Crosshair ch;
     float damage = 1;
 
+    void Start()
+    {
+        ch = FindObjectOfType<Crosshair>();
+    }
+
     void Update() {
         raycast();
 
@@ -24,7 +29,6 @@ public class Gun : Shooter {
                 if (Input.GetMouseButtonDown(0))
                 {
                     print("Mouse hitting: " + hit.transform.name);
-                    HealthBar.health -= 1f;
                 }
                 
             }
@@ -58,8 +62,6 @@ public class Gun : Shooter {
         //Debug.DrawRay(origin, direction*10f, Color.green);
     }
 
-   void Start() {
-        ch = FindObjectOfType<Crosshair>();
-    }
+   
 
 }
