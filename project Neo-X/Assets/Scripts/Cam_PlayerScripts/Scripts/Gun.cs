@@ -6,7 +6,8 @@ using UnityEngine;
 public class Gun : Shooter {
 
     [SerializeField] GameObject pointAt;
-    Crosshair ch; 
+    Crosshair ch;
+    float damage = 1;
 
     void Update() {
         raycast();
@@ -18,8 +19,14 @@ public class Gun : Shooter {
             RaycastHit hit;
         Debug.DrawRay(ray.origin, ray.direction*30f, Color.green);
         
-            if (Physics.Raycast(ray, out hit)) {
-                print("Mouse hitting: " + hit.transform.name);
+            if (Physics.Raycast(ray, out hit)) 
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    print("Mouse hitting: " + hit.transform.name);
+                    HealthBar.health -= 1f;
+                }
+                
             }
 
         //print(Input.mousePosition);

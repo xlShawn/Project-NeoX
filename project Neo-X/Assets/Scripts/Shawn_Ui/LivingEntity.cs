@@ -22,7 +22,7 @@ public class LivingEntity : MonoBehaviour, IDamageable
         {
             Die();
             //FindObjectOfType<GameManager_UI>().EndGame();
-            SceneManager.LoadScene(2);
+            //SceneManager.LoadScene(2);
         }
     }
 

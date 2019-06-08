@@ -35,7 +35,7 @@ public class Inventory : MonoBehaviour
             inventoryEnabled = !inventoryEnabled;
         }
 
-        /*if (inventoryEnabled == true)
+        if (inventoryEnabled == true)
         {
             inventory.SetActive(true);
             Cursor.visible = true;
@@ -46,7 +46,7 @@ public class Inventory : MonoBehaviour
             inventory.SetActive(false);
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
-        }*/
+        }
 
     }
 

@@ -5,8 +5,10 @@ using UnityEngine;
 public class Shooter : MonoBehaviour
 {
     public float rateOfFire;
+    [SerializeField] Projectile_UI projectileS;
     [SerializeField] Projectile projectile;
-    
+
+
 
     [HideInInspector]
     public Transform muzzle;
@@ -29,7 +31,7 @@ public class Shooter : MonoBehaviour
         nextFireAllowed = Time.time + rateOfFire;
 
         //Instantiate the projectile
-        Instantiate(projectile, muzzle.position, muzzle.rotation);
+        Instantiate(projectileS, muzzle.position, muzzle.rotation);
 
         print("FIRE!"+ Time.time);
        

@@ -7,7 +7,7 @@ public class ThirdPersonCamera : MonoBehaviour {
     public float damping;
 
     Transform cameraLookTarget;
-    Player localPlayer;
+    public Player localPlayer;
 
 
     void Awake() {
