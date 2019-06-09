@@ -10,6 +10,9 @@ public class Enemy : LivingEntity
 {
 
     public Transform pathHolder;
+    public Projectile_UI projectile;
+    private float timeBtwShots;
+    public float startTimeBtwShots;
 
     private void OnDrawGizmos() 
     {
@@ -37,8 +40,21 @@ public class Enemy : LivingEntity
         target = GameObject.FindGameObjectWithTag("Player").transform;
         StartCoroutine(UpdatePath());
         gameObject.GetComponent<EnemyAiFollowPath>().enabled = false;
-    }
+        timeBtwShots = startTimeBtwShots;
 
+    }
+    private void Update()
+    {
+        if (timeBtwShots <= 0)
+        {
+            Instantiate(projectile, target.position, Quaternion.identity);
+            timeBtwShots = startTimeBtwShots;
+        }
+        else
+        {
+            timeBtwShots -= Time.deltaTime;
+        }
+    }
     IEnumerator UpdatePath()
     {
         float refreshRate = .25f;

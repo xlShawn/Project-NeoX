@@ -14,7 +14,7 @@ public class EnemyAiFollowPath : LivingEntity
     public float viewDistance;
     public LayerMask viewMask;
     float viewAngle;
-
+    private bool enemyFunctionRestart;
     public Transform pathHolder;
     Transform player;
     Color originalSpotlightColor;
@@ -40,6 +40,7 @@ public class EnemyAiFollowPath : LivingEntity
     private void Update()
     {
         
+
         if (CanSeePlayer())
         {
             gameObject.GetComponent<NavMeshAgent>().enabled = true;
