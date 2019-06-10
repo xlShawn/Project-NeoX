@@ -18,6 +18,7 @@ public class Enemy : LivingEntity
     public GameObject muzzle;
     public float fireTimer;
     private bool shotReady;
+    public float timeToLive;
 
     //public float speed;
     //public float stoppingDistance;
@@ -44,11 +45,10 @@ public class Enemy : LivingEntity
 
     NavMeshAgent pathfinder;
     Transform target;
-    public float timeToLive;
 
     protected override void Start()
     {
-        Destroy(projectile, timeToLive*Time.deltaTime);
+        
         base.Start();
 
         pathfinder = GetComponent<NavMeshAgent>();
@@ -56,8 +56,8 @@ public class Enemy : LivingEntity
         StartCoroutine(UpdatePath());
         gameObject.GetComponent<EnemyAiFollowPath>().enabled = false;
         //timeBtwShots = startTimeBtwShots;
-        shotReady = true; 
-
+        shotReady = true;
+        Destroy(projectile, timeToLive);
     }
 
     private void Update()
@@ -65,8 +65,7 @@ public class Enemy : LivingEntity
         //shooting detecting enemies;
         if (playerLocked)
         {
-            transform.LookAt(player.transform);
-
+            transform.LookAt(target);
             if (shotReady)
             {
                 Shoot();
@@ -96,14 +95,17 @@ public class Enemy : LivingEntity
 
     void Shoot()
     {
-        Instantiate(projectile, muzzle.transform.position, Quaternion.identity);
+        Transform _bullet = Instantiate(projectile.transform, muzzle.transform.position, Quaternion.identity);
+        _bullet.transform.rotation = muzzle.transform.rotation;
         shotReady = false;
         StartCoroutine(FireRate());
     }
+
     IEnumerator FireRate()
     {
         yield return new WaitForSeconds(fireTimer);
         shotReady = true;
+
     }
 
     private void OnTriggerEnter(Collider other)

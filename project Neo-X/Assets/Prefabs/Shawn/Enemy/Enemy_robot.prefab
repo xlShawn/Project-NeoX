@@ -793,9 +793,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 2
   pathHolder: {fileID: 0}
-  projectile: {fileID: 850387829290907573, guid: 47c95f1f650730441ac9b7c47e4684cc,
+  projectile: {fileID: 2950089010528686834, guid: 47c95f1f650730441ac9b7c47e4684cc,
     type: 3}
-  Muzzle: {fileID: 2799767411983721608}
+  muzzle: {fileID: 0}
   fireTimer: 0
 --- !u!195 &7503918432301294541
 NavMeshAgent:

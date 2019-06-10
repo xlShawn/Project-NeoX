@@ -88,6 +88,11 @@ public class Player : LivingEntity /* Health system*/ {
                 gunController.Shoot();
             }
         }
+        if(health <= 0)
+        {
+            Die();
 
+        }
     }
+
 }

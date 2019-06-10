@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class LivingEntity : MonoBehaviour, IDamageable
 {
     public float startingHealth;
-    protected float health;
+    public float health; // it also could be protected, if it doesnt work.
     protected bool dead;
 
     protected virtual void Start()
