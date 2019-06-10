@@ -2027,6 +2027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 5
+  health: 0
   speed: 10
   mouseControl:
     damping: {x: 5, y: 2}
@@ -23211,7 +23212,7 @@ PrefabInstance:
     - target: {fileID: 15212999654712754, guid: 0d93ab456815412409e29e41dfc0ab89,
         type: 3}
       propertyPath: fireTimer
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 15212999654712754, guid: 0d93ab456815412409e29e41dfc0ab89,
         type: 3}
@@ -24620,7 +24621,7 @@ PrefabInstance:
     - target: {fileID: 8909112935808657816, guid: f8d1c99767834a84fbae4790366f9242,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 271.35236
+      value: 324.21332
       objectReference: {fileID: 0}
     - target: {fileID: 8909112936953897335, guid: f8d1c99767834a84fbae4790366f9242,
         type: 3}
