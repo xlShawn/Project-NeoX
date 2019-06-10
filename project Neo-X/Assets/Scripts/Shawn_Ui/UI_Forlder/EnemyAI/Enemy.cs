@@ -65,15 +65,11 @@ public class Enemy : LivingEntity
         //shooting detecting enemies;
         if (playerLocked)
         {
-            transform.LookAt(player.transform);
-
+            transform.LookAt(target);
             if (shotReady)
             {
                 Shoot();
             }
-
-
-
         }
         //if (Vector3.Distance(transform.position, target.position) > stoppingDistance)
         //{
@@ -99,7 +95,8 @@ public class Enemy : LivingEntity
 
     void Shoot()
     {
-        Instantiate(projectile, muzzle.transform.position, Quaternion.identity);
+        Transform _bullet = Instantiate(projectile.transform, muzzle.transform.position, Quaternion.identity);
+        _bullet.transform.rotation = muzzle.transform.rotation;
         shotReady = false;
         StartCoroutine(FireRate());
     }
