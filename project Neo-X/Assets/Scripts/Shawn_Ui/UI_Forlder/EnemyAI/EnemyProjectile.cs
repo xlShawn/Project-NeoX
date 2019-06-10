@@ -7,6 +7,7 @@ public class EnemyProjectile : MonoBehaviour
     public LayerMask collisionMask;
     float speed = 10;
     float damage = 1;
+    private GameObject target;
 
     public void SetSpeed(float newSpeed)
     {
@@ -16,34 +17,39 @@ public class EnemyProjectile : MonoBehaviour
     void Update()
     {
         float moveDistance = speed * Time.deltaTime;
-        CheckCollisions(moveDistance);
+        //CheckCollisions(moveDistance);
         transform.Translate(Vector3.forward * moveDistance);
     }
 
 
-    void CheckCollisions(float moveDistance)
-    {
-        Ray ray = new Ray(transform.position, transform.forward);
-        RaycastHit hit;
+    //void CheckCollisions(float moveDistance)
+    //{
+    //    Ray ray = new Ray(transform.position, transform.forward);
+    //    RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, moveDistance, collisionMask, QueryTriggerInteraction.Collide))
-        {
-            OnHitObject(hit);
-            print(HealthBar.health);
-        }
-    }
+    //    if (Physics.Raycast(ray, out hit, moveDistance, collisionMask, QueryTriggerInteraction.Collide))
+    //    {
+    //        OnHitObject(hit);
+    //        print(HealthBar.health);
+    //    }
+    //}
     private void OnTriggerEnter(Collider other)
     {
-        
-    }
-    void OnHitObject(RaycastHit hit)
-    {
-        HealthBar.health -= 1f;
-        IDamageable damageableObject = hit.collider.GetComponent<IDamageable>();
-        if (damageableObject != null)
+        if(other.tag == "Player")
         {
-            damageableObject.TakeHit(damage, hit);
+            target = other.gameObject;
+            target.GetComponent<Player>().health -= damage;
+            Destroy(this.gameObject);
         }
-        GameObject.Destroy(gameObject);
     }
+    //void OnHitObject(RaycastHit hit)
+    //{
+    //    HealthBar.health -= 1f;
+    //    IDamageable damageableObject = hit.collider.GetComponent<IDamageable>();
+    //    if (damageableObject != null)
+    //    {
+    //        damageableObject.TakeHit(damage, hit);
+    //    }
+    //    GameObject.Destroy(gameObject);
+    //}
 }
