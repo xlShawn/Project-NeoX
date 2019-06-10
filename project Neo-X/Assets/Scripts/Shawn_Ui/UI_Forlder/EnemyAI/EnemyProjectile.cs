@@ -32,7 +32,10 @@ public class EnemyProjectile : MonoBehaviour
             print(HealthBar.health);
         }
     }
-
+    private void OnTriggerEnter(Collider other)
+    {
+        
+    }
     void OnHitObject(RaycastHit hit)
     {
         HealthBar.health -= 1f;
