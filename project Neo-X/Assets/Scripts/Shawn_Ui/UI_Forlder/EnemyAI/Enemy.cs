@@ -71,26 +71,6 @@ public class Enemy : LivingEntity
                 Shoot();
             }
         }
-        //if (Vector3.Distance(transform.position, target.position) > stoppingDistance)
-        //{
-        //    transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-        //}else if(Vector3.Distance(transform.position,target.position)<stoppingDistance && Vector3.Distance(transform.position, target.position) > retreatDistance)
-        //{
-        //    transform.position = this.transform.position;
-        //}else if (Vector3.Distance(transform.position, target.position) < retreatDistance)
-        //{
-        //    transform.position = Vector3.MoveTowards(transform.position, target.position, -speed * Time.deltaTime);
-        //}
-
-        //if (timeBtwShots <= 0)
-        //{
-        //    Instantiate(projectile, transform.position, Quaternion.identity);
-        //    timeBtwShots = startTimeBtwShots;
-        //}
-        //else
-        //{
-        //    timeBtwShots -= Time.deltaTime;
-        //}
     }
 
     void Shoot()
