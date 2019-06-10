@@ -44,4 +44,5 @@ public class Projectile_UI : MonoBehaviour
         }
         GameObject.Destroy(gameObject);
     }
+
 }
