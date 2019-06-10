@@ -10,9 +10,23 @@ public class Enemy : LivingEntity
 {
 
     public Transform pathHolder;
-    public Projectile_UI projectile;
-    private float timeBtwShots;
-    public float startTimeBtwShots;
+    public EnemyProjectile projectile;
+
+    private GameObject player;
+    private bool playerLocked;
+
+    public GameObject muzzle;
+    public float fireTimer;
+    private bool shotReady;
+
+    //public float speed;
+    //public float stoppingDistance;
+    //public float retreatDistance;
+
+
+    //private float timeBtwShots;
+    //public float startTimeBtwShots;
+
 
     private void OnDrawGizmos() 
     {
@@ -30,31 +44,77 @@ public class Enemy : LivingEntity
 
     NavMeshAgent pathfinder;
     Transform target;
+    public float timeToLive;
 
     protected override void Start()
     {
-        
+        Destroy(projectile, timeToLive*Time.deltaTime);
         base.Start();
 
         pathfinder = GetComponent<NavMeshAgent>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
         StartCoroutine(UpdatePath());
         gameObject.GetComponent<EnemyAiFollowPath>().enabled = false;
-        timeBtwShots = startTimeBtwShots;
+        //timeBtwShots = startTimeBtwShots;
+        shotReady = true; 
 
     }
+
     private void Update()
     {
-        if (timeBtwShots <= 0)
+        //shooting detecting enemies;
+        if (playerLocked)
         {
-            Instantiate(projectile, target.position, Quaternion.identity);
-            timeBtwShots = startTimeBtwShots;
+            transform.LookAt(player.transform);
+
+            if (shotReady)
+            {
+                Shoot();
+            }
         }
-        else
+        //if (Vector3.Distance(transform.position, target.position) > stoppingDistance)
+        //{
+        //    transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        //}else if(Vector3.Distance(transform.position,target.position)<stoppingDistance && Vector3.Distance(transform.position, target.position) > retreatDistance)
+        //{
+        //    transform.position = this.transform.position;
+        //}else if (Vector3.Distance(transform.position, target.position) < retreatDistance)
+        //{
+        //    transform.position = Vector3.MoveTowards(transform.position, target.position, -speed * Time.deltaTime);
+        //}
+
+        //if (timeBtwShots <= 0)
+        //{
+        //    Instantiate(projectile, transform.position, Quaternion.identity);
+        //    timeBtwShots = startTimeBtwShots;
+        //}
+        //else
+        //{
+        //    timeBtwShots -= Time.deltaTime;
+        //}
+    }
+
+    void Shoot()
+    {
+        Instantiate(projectile, muzzle.transform.position, Quaternion.identity);
+        shotReady = false;
+        StartCoroutine(FireRate());
+    }
+    IEnumerator FireRate()
+    {
+        yield return new WaitForSeconds(fireTimer);
+        shotReady = true;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Player")
         {
-            timeBtwShots -= Time.deltaTime;
+            player = other.gameObject;
+            playerLocked = true;
         }
     }
+
     IEnumerator UpdatePath()
     {
         float refreshRate = .25f;
