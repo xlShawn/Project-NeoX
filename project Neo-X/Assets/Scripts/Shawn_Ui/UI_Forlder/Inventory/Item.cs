@@ -55,11 +55,11 @@ public class Item : MonoBehaviour
     {
 
         //key
-        //if (type == "Key")
-        //{
-        //    DoorScript.doorKey = true;
-        //    equipped = true;
-        //}
+        if (type == "Key")
+        {
+            DoorScript.doorKey = true;
+            equipped = true;
+        }
 
 
         //weapon
