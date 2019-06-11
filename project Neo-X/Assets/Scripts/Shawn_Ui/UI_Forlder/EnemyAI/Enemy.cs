@@ -57,7 +57,7 @@ public class Enemy : LivingEntity
         gameObject.GetComponent<EnemyAiFollowPath>().enabled = false;
         //timeBtwShots = startTimeBtwShots;
         shotReady = true;
-        Destroy(projectile, timeToLive);
+        //Destroy(projectile, timeToLive);
     }
 
     private void Update()

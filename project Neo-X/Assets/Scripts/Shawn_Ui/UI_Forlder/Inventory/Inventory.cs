@@ -55,14 +55,19 @@ public class Inventory : MonoBehaviour
         throw new NotImplementedException();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Item" )
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            GameObject itemPickedUp = other.gameObject;
-            Item item = itemPickedUp.GetComponent<Item>();
-            AddItem(itemPickedUp, item.ID, item.type, item.description, item.icon);
+            if (other.tag == "Item")
+            {
+                GameObject itemPickedUp = other.gameObject;
+                Item item = itemPickedUp.GetComponent<Item>();
+                AddItem(itemPickedUp, item.ID, item.type, item.description, item.icon);
+            }
+            return;
         }
+
     }
 
     public void AddItem(GameObject itemObject, int itemID, string itemType, string itemDescription, Sprite itemIcon)
@@ -82,7 +87,7 @@ public class Inventory : MonoBehaviour
         
                 itemObject.transform.parent = slot[i].transform;
                 itemObject.SetActive(false);
-        
+                
                 slot[i].GetComponent<Slot>().updateSlot();
                 slot[i].GetComponent<Slot>().empty = false;
         
