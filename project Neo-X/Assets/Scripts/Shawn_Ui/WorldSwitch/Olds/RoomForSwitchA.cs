@@ -47,7 +47,7 @@ public class RoomForSwitchA : MonoBehaviour
         {
             print("hello");
 
-            GUI.Box(new Rect(0, 0, 200, 25), "Switch Area");
+            GUI.Box(new Rect(0, 0, Screen.width / 9.6f, Screen.height / 43.2f), "Switch Area");
         }
     }
 }

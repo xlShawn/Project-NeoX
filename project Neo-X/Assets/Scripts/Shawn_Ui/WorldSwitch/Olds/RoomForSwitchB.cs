@@ -35,7 +35,6 @@ public class RoomForSwitchB : MonoBehaviour
         if (Col.attachedRigidbody)
         {
             intoRoomB = true;
-
         }
     }
     private void OnTriggerExit(Collider Col)
@@ -48,7 +47,7 @@ public class RoomForSwitchB : MonoBehaviour
         if (intoRoomB == true)
         {
             print("helloB");
-            GUI.Box(new Rect(0, 0, 200, 25), "Switch Area");
+            GUI.Box(new Rect(0, 0, Screen.width / 9.6f, Screen.height / 43.2f), "Switch Area");
         }
     }
 }

@@ -70,17 +70,17 @@ public class DoorScript : MonoBehaviour
         {
             if (open)
             {
-                GUI.Box(new Rect(0, 0, 200, 25), "press E to close");
+                GUI.Box(new Rect(0, 0, Screen.width / 9.6f, Screen.height / 43.2f), "press E to close");
             }
             else
             {
                 if (doorKey)
                 {
-                    GUI.Box(new Rect(0, 0, 200, 25), "Press E to open");
+                    GUI.Box(new Rect(0, 0, Screen.width / 9.6f, Screen.height / 43.2f), "Press E to open");
                 }
                 else
                 {
-                    GUI.Box(new Rect(0, 0, 200, 25), "Need a key");
+                    GUI.Box(new Rect(0, 0, Screen.width / 9.6f, Screen.height / 43.2f), "Need a key");
                 }
                 
             }

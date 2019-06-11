@@ -64,12 +64,29 @@ public class Inventory : MonoBehaviour
                 GameObject itemPickedUp = other.gameObject;
                 Item item = itemPickedUp.GetComponent<Item>();
                 AddItem(itemPickedUp, item.ID, item.type, item.description, item.icon);
+                inTrigger = false;
             }
             return;
         }
 
     }
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+        inTrigger = true;
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        inTrigger = false;
+    }
+    private void OnGUI()
+    {
+        if (inTrigger == true)
+        {
+            print("helloB");
+            GUI.Box(new Rect(0, 0, Screen.width / 9.6f,Screen.height / 43.2f), "Press E to Pick Up");
+        }
+    }
     public void AddItem(GameObject itemObject, int itemID, string itemType, string itemDescription, Sprite itemIcon)
     {
         for (int i = 0; i < allSlots; i++)
