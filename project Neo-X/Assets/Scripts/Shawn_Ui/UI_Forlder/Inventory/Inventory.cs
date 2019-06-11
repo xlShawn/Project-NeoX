@@ -64,7 +64,7 @@ public class Inventory : MonoBehaviour
                 GameObject itemPickedUp = other.gameObject;
                 Item item = itemPickedUp.GetComponent<Item>();
                 AddItem(itemPickedUp, item.ID, item.type, item.description, item.icon);
-                inTrigger = false;
+
             }
             return;
         }
@@ -72,8 +72,11 @@ public class Inventory : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
-        inTrigger = true;
+        if (other.tag == "Player")
+        {
+            inTrigger = true;
+        }
+
     }
     private void OnTriggerExit(Collider other)
     {
@@ -84,7 +87,7 @@ public class Inventory : MonoBehaviour
         if (inTrigger == true)
         {
             print("helloB");
-            GUI.Box(new Rect(0, 0, Screen.width / 9.6f,Screen.height / 43.2f), "Press E to Pick Up");
+            GUI.Box(new Rect(0, 0, Screen.width / 8f, Screen.height / 40f), "Press E to Pick Up");
         }
     }
     public void AddItem(GameObject itemObject, int itemID, string itemType, string itemDescription, Sprite itemIcon)

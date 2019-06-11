@@ -1174,7 +1174,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272170411}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.9, y: 3, z: 31.4}
+  m_LocalPosition: {x: -2.76, y: 3, z: 21.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1048194683}
@@ -2564,7 +2564,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715585789}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.3, y: 3, z: -1.5}
+  m_LocalPosition: {x: -3.52, y: 3, z: -3.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1048194683}
@@ -2795,6 +2795,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.x
       value: 2.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545492702658807583, guid: 3c4866d208f5942fbad6dc7031dc739a,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c4866d208f5942fbad6dc7031dc739a, type: 3}
@@ -3769,6 +3774,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.x
       value: 2.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545492702658807583, guid: 3c4866d208f5942fbad6dc7031dc739a,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c4866d208f5942fbad6dc7031dc739a, type: 3}
@@ -22228,7 +22238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1861350563}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.3, y: 3, z: -4.7}
+  m_LocalPosition: {x: 4.35, y: 3, z: 14.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1048194683}
@@ -24789,7 +24799,7 @@ PrefabInstance:
     - target: {fileID: 8909112935808657816, guid: f8d1c99767834a84fbae4790366f9242,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 324.6546
+      value: 324.6539
       objectReference: {fileID: 0}
     - target: {fileID: 8909112936953897335, guid: f8d1c99767834a84fbae4790366f9242,
         type: 3}
