@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Projectile_UI : MonoBehaviour
 {
-
     public LayerMask collisionMask;
     float speed = 10;
     float damage = 1;
