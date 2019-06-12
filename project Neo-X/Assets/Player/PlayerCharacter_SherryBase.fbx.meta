@@ -12,7 +12,17 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: BodyTexture1
+    second: {fileID: 2100000, guid: 99ee43a6c4d7d48b6a2450bcb2503247, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: ChokerTexture
+    second: {fileID: 2100000, guid: a4e17b37111054def860e306dc3323e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ChokerTexture1
     second: {fileID: 2100000, guid: a4e17b37111054def860e306dc3323e0, type: 2}
   - first:
       type: UnityEngine:Material
@@ -22,7 +32,17 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: DressTexture1
+    second: {fileID: 2100000, guid: ae1af84797d5045369df342d68af9f26, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: EyeballsTexture
+    second: {fileID: 2100000, guid: 89deca78381d847f180549933019832b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EyeballsTexture1
     second: {fileID: 2100000, guid: 89deca78381d847f180549933019832b, type: 2}
   - first:
       type: UnityEngine:Material
@@ -32,7 +52,17 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Hair_Texture1
+    second: {fileID: 2100000, guid: 50a30b84ea71b454781a105ceb6de5a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: HeelsTexture
+    second: {fileID: 2100000, guid: dd4289842d7df4c4d9067820389792cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HeelsTexture1
     second: {fileID: 2100000, guid: dd4289842d7df4c4d9067820389792cb, type: 2}
   materials:
     importMaterials: 1
