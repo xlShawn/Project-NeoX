@@ -12,8 +12,6 @@ public class Inventory : MonoBehaviour
     private int enabledSlots;
     private GameObject[] slot;
     public GameObject slotHolder;
-    public bool inTrigger;
-
     void Start()
     {
         allSlots = 42;
@@ -70,26 +68,8 @@ public class Inventory : MonoBehaviour
         }
 
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            inTrigger = true;
-        }
 
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        inTrigger = false;
-    }
-    private void OnGUI()
-    {
-        if (inTrigger == true)
-        {
-            print("helloB");
-            GUI.Box(new Rect(0, 0, Screen.width / 8f, Screen.height / 40f), "Press E to Pick Up");
-        }
-    }
+
     public void AddItem(GameObject itemObject, int itemID, string itemType, string itemDescription, Sprite itemIcon)
     {
         for (int i = 0; i < allSlots; i++)
