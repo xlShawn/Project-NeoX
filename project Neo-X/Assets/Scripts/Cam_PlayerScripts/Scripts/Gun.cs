@@ -10,8 +10,8 @@ public class Gun : Shooter {
     public float damage = 1;
 
     public ParticleSystem muzzleFlash;
-
     public GameObject impactEffect;
+
 
     void Start()
     {
@@ -28,20 +28,20 @@ public class Gun : Shooter {
         if (Physics.Raycast(ray, out hit)) 
         {
             if (Input.GetMouseButtonDown(0))
-            {
+            {   
+
                 muzzleFlash.Play();
                 print("Mouse hitting:  " + hit.transform.name);
                 Enemy _enemy = hit.transform.GetComponent<Enemy>();
                 if(_enemy != null)
                 {
                     _enemy.TakeHit(damage, hit);
-
                 }
 
                 GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
                 Destroy(impactGO, 0.1f);
             }
-        }
+        } 
 
         //print(Input.mousePosition);
         //print(ch.crosshairPos);

@@ -12,6 +12,7 @@ public class Player : LivingEntity /* Health system*/ {
     //anim = getcomponent<Animator>(); Tui left this here
     PlayerController controller;
     GunController gunController;
+
     //Shawn Player script ^
 
 
