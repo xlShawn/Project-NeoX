@@ -38,9 +38,9 @@ public class Gun : Shooter {
 
                 }
 
-                Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                Destroy(impactGO, 0.1f);
             }
-            return;
         }
 
         //print(Input.mousePosition);

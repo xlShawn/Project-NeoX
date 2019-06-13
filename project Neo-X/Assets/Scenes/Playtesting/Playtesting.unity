@@ -3924,6 +3924,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &984117581 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1946306111185417771, guid: 265d9dee76eee9f468c3711171216277,
+    type: 3}
+  m_PrefabInstance: {fileID: 1617302687}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &984117582
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984117581}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.19, y: 0.03, z: 0.38}
+  m_Center: {x: 0, y: 0, z: 0.07}
 --- !u!1 &987814016
 GameObject:
   m_ObjectHideFlags: 0
@@ -20641,7 +20660,7 @@ PrefabInstance:
     - target: {fileID: 1946306111185417771, guid: 265d9dee76eee9f468c3711171216277,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3267909913010373688, guid: 265d9dee76eee9f468c3711171216277,
         type: 3}
@@ -20773,7 +20792,8 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4101828601170637881, guid: 265d9dee76eee9f468c3711171216277, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 265d9dee76eee9f468c3711171216277, type: 3}
 --- !u!1001 &1628271248
 PrefabInstance:
@@ -23706,6 +23726,11 @@ PrefabInstance:
       propertyPath: impactEffect
       value: 
       objectReference: {fileID: 100006, guid: 0438351a6e6422d43a09930e9be00ee9, type: 3}
+    - target: {fileID: 8799629897490177666, guid: 3722525a3e13a431d98398d99b4c14e0,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1069313344147649367, guid: 3722525a3e13a431d98398d99b4c14e0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23761,6 +23786,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 172.499
       objectReference: {fileID: 0}
+    - target: {fileID: 8799629897508095968, guid: 3722525a3e13a431d98398d99b4c14e0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799629897490177668, guid: 3722525a3e13a431d98398d99b4c14e0,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3722525a3e13a431d98398d99b4c14e0, type: 3}
 --- !u!4 &3267909911510840937 stripped
@@ -23776,6 +23811,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1223619582}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Radius
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8293344846271279187, guid: 0d93ab456815412409e29e41dfc0ab89,
         type: 3}
       propertyPath: m_Name
@@ -23891,16 +23934,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9025343193480538408, guid: 0d93ab456815412409e29e41dfc0ab89,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9025343193480538408, guid: 0d93ab456815412409e29e41dfc0ab89,
-        type: 3}
-      propertyPath: m_Radius
-      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d93ab456815412409e29e41dfc0ab89, type: 3}
@@ -25294,7 +25327,7 @@ PrefabInstance:
     - target: {fileID: 8909112935808657816, guid: f8d1c99767834a84fbae4790366f9242,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 254.17317
+      value: 297.3424
       objectReference: {fileID: 0}
     - target: {fileID: 8909112936953897335, guid: f8d1c99767834a84fbae4790366f9242,
         type: 3}

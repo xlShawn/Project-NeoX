@@ -2855,7 +2855,7 @@ GameObject:
   - component: {fileID: 15212999654712754}
   - component: {fileID: 15212999654712757}
   - component: {fileID: 8293344846271279186}
-  - component: {fileID: 9025343193480538408}
+  - component: {fileID: -2941772707320357430}
   m_Layer: 8
   m_Name: Enemy_robot
   m_TagString: Untagged
@@ -2926,12 +2926,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 5
+  health: 0
   pathHolder: {fileID: 3535697994645040308, guid: 47c95f1f650730441ac9b7c47e4684cc,
     type: 3}
   projectile: {fileID: 1075594290413286164, guid: 47c95f1f650730441ac9b7c47e4684cc,
     type: 3}
   muzzle: {fileID: 6645674594506043686}
-  fireTimer: 0
+  fireTimer: 1
+  timeToLive: 3
 --- !u!195 &15212999654712757
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2967,6 +2969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 5
+  health: 0
   speed: 5
   waitTime: 0.3
   turnSpeed: 90
@@ -2976,8 +2979,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   pathHolder: {fileID: 0}
---- !u!135 &9025343193480538408
-SphereCollider:
+--- !u!65 &-2941772707320357430
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2987,8 +2990,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.19, y: 0.03, z: 0.38}
+  m_Center: {x: 0, y: 0, z: 0.07}
 --- !u!1 &8627257322647521460
 GameObject:
   m_ObjectHideFlags: 0
