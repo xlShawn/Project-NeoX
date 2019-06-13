@@ -2227,8 +2227,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.42, y: 5.08, z: 1.43}
-  m_Center: {x: 0, y: 2.67, z: 0}
+  m_Size: {x: 0.82, y: 3.71, z: 0.63}
+  m_Center: {x: 0, y: 1.83, z: 0.12}
 --- !u!1 &597961453
 GameObject:
   m_ObjectHideFlags: 0
@@ -23728,8 +23728,18 @@ PrefabInstance:
       objectReference: {fileID: 100006, guid: 0438351a6e6422d43a09930e9be00ee9, type: 3}
     - target: {fileID: 8799629897490177666, guid: 3722525a3e13a431d98398d99b4c14e0,
         type: 3}
-      propertyPath: playOnAwake
-      value: 1
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799629897490177666, guid: 3722525a3e13a431d98398d99b4c14e0,
+        type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8799629897490177666, guid: 3722525a3e13a431d98398d99b4c14e0,
+        type: 3}
+      propertyPath: looping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1069313344147649367, guid: 3722525a3e13a431d98398d99b4c14e0,
         type: 3}
@@ -23789,11 +23799,6 @@ PrefabInstance:
     - target: {fileID: 8799629897508095968, guid: 3722525a3e13a431d98398d99b4c14e0,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8799629897490177668, guid: 3722525a3e13a431d98398d99b4c14e0,
-        type: 3}
-      propertyPath: playOnAwake
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
