@@ -9,35 +9,39 @@ public class Gun : Shooter {
     Crosshair ch;
     public float damage = 1;
 
+    public ParticleSystem muzzleFlash;
+
+    public GameObject impactEffect;
+
     void Start()
     {
         ch = FindObjectOfType<Crosshair>();
     }
 
     void Update() {
+
         raycast();
-
-
-
-
         Ray ray = Camera.main.ScreenPointToRay(new Vector2(ch.crosshairPos.x+(ch.size/2), Mathf.Lerp(Screen.height, 0, ch.crosshairPos.y/Screen.height)-(ch.size/2)));
-            RaycastHit hit;
+        RaycastHit hit;
         Debug.DrawRay(ray.origin, ray.direction*30f, Color.green);
         
-            if (Physics.Raycast(ray, out hit)) 
+        if (Physics.Raycast(ray, out hit)) 
+        {
+            if (Input.GetMouseButtonDown(0))
             {
-                if (Input.GetMouseButtonDown(0))
-                {
-                    print("Mouse hitting:  " + hit.transform.name);
-                    Enemy _enemy = hit.transform.GetComponent<Enemy>();
+                muzzleFlash.Play();
+                print("Mouse hitting:  " + hit.transform.name);
+                Enemy _enemy = hit.transform.GetComponent<Enemy>();
                 if(_enemy != null)
                 {
                     _enemy.TakeHit(damage, hit);
 
                 }
-                }
-                return;
+
+                Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
             }
+            return;
+        }
 
         //print(Input.mousePosition);
         //print(ch.crosshairPos);
