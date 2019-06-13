@@ -22541,12 +22541,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rateOfFire: 1
-  projectileS: {fileID: 1075594290413286164, guid: aa4a639df0dae434bb704432a36be595,
-    type: 3}
+  projectileS: {fileID: 0}
   projectile: {fileID: 0}
   muzzle: {fileID: 0}
   canFire: 0
   pointAt: {fileID: 1240393698}
+  damage: 1
 --- !u!1 &1782126395
 GameObject:
   m_ObjectHideFlags: 0
