@@ -7,7 +7,7 @@ public class Gun : Shooter {
 
     [SerializeField] GameObject pointAt;
     Crosshair ch;
-    float damage = 1;
+    public float damage = 1;
 
     void Start()
     {
@@ -28,9 +28,15 @@ public class Gun : Shooter {
             {
                 if (Input.GetMouseButtonDown(0))
                 {
-                    print("Mouse hitting: " + hit.transform.name);
+                    print("Mouse hitting:  " + hit.transform.name);
+                    Enemy _enemy = hit.transform.GetComponent<Enemy>();
+                if(_enemy != null)
+                {
+                    _enemy.TakeHit(damage, hit);
+
                 }
-                
+                }
+                return;
             }
 
         //print(Input.mousePosition);

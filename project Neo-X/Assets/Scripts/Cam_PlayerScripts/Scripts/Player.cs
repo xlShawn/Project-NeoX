@@ -83,10 +83,12 @@ public class Player : LivingEntity /* Health system*/ {
         //Weapon Input --Shawn Script
         if (weaponEquipment == true)
         {
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButtonDown(0))
             {
                 gunController.Shoot();
             }
+            return;
+
         }
         if(health <= 0)
         {
