@@ -30,6 +30,7 @@ public class Projectile_UI : MonoBehaviour
         {
             OnHitObject(hit);
             print(HealthBar.health);
+
         }
     }
 

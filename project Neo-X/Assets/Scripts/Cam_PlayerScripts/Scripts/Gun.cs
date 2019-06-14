@@ -36,6 +36,7 @@ public class Gun : Shooter {
                 if(_enemy != null)
                 {
                     _enemy.TakeHit(damage, hit);
+
                 }
 
                 GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));

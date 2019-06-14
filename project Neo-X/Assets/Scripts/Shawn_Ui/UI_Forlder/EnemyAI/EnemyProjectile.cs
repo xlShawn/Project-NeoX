@@ -39,6 +39,7 @@ public class EnemyProjectile : MonoBehaviour
         {
             target = other.gameObject;
             target.GetComponent<Player>().health -= damage;
+            HealthBar.health -= 1f;
             Destroy(this.gameObject);
         }
     }

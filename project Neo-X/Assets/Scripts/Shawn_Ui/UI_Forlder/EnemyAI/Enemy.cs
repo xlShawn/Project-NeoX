@@ -79,6 +79,7 @@ public class Enemy : LivingEntity
         _bullet.transform.rotation = muzzle.transform.rotation;
         shotReady = false;
         StartCoroutine(FireRate());
+
     }
 
     IEnumerator FireRate()

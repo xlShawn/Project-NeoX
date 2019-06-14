@@ -792,11 +792,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 2
+  health: 0
   pathHolder: {fileID: 0}
   projectile: {fileID: 2950089010528686834, guid: 47c95f1f650730441ac9b7c47e4684cc,
     type: 3}
   muzzle: {fileID: 0}
   fireTimer: 0
+  timeToLive: 0
 --- !u!195 &7503918432301294541
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -832,6 +834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 2
+  health: 0
   speed: 5
   waitTime: 0.3
   turnSpeed: 90
