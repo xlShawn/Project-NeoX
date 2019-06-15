@@ -1,67 +1,179 @@
 fileFormatVersion: 2
 guid: 12906fd0112a21b4b87af1bd944c1ebd
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: rect_floor_3_Room_asset_Floor2
-    100002: Room_asset_Floor2_group1_pCylinder13
-    100004: Room_asset_Floor2_group1_pCylinder14
-    100006: Room_asset_Floor2_group1_pCylinder15
-    100008: Room_asset_Floor2_group1_pCylinder16
-    100010: Room_asset_Floor2_group1_pCylinder17
-    100012: Room_asset_Floor2_group1_pCylinder18
-    100014: Room_asset_Floor2_group1_pCylinder19
-    100016: Room_asset_Floor2_pCylinder12_group1
-    100018: //RootNode
-    400000: rect_floor_3_Room_asset_Floor2
-    400002: Room_asset_Floor2_group1_pCylinder13
-    400004: Room_asset_Floor2_group1_pCylinder14
-    400006: Room_asset_Floor2_group1_pCylinder15
-    400008: Room_asset_Floor2_group1_pCylinder16
-    400010: Room_asset_Floor2_group1_pCylinder17
-    400012: Room_asset_Floor2_group1_pCylinder18
-    400014: Room_asset_Floor2_group1_pCylinder19
-    400016: Room_asset_Floor2_pCylinder12_group1
-    400018: //RootNode
-    2100000: rect_floor_3_Room_asset_Floor2Mat
-    2100002: Room_asset_Floor2_group1_pCylinder13Mat
-    2100004: Room_asset_Floor2_group1_pCylinder14Mat
-    2100006: Room_asset_Floor2_group1_pCylinder15Mat
-    2100008: Room_asset_Floor2_group1_pCylinder16Mat
-    2100010: Room_asset_Floor2_group1_pCylinder17Mat
-    2100012: Room_asset_Floor2_group1_pCylinder18Mat
-    2100014: Room_asset_Floor2_group1_pCylinder19Mat
-    2100016: Room_asset_Floor2_pCylinder12_group1Mat
-    2300000: rect_floor_3_Room_asset_Floor2
-    2300002: Room_asset_Floor2_group1_pCylinder13
-    2300004: Room_asset_Floor2_group1_pCylinder14
-    2300006: Room_asset_Floor2_group1_pCylinder15
-    2300008: Room_asset_Floor2_group1_pCylinder16
-    2300010: Room_asset_Floor2_group1_pCylinder17
-    2300012: Room_asset_Floor2_group1_pCylinder18
-    2300014: Room_asset_Floor2_group1_pCylinder19
-    2300016: Room_asset_Floor2_pCylinder12_group1
-    3300000: rect_floor_3_Room_asset_Floor2
-    3300002: Room_asset_Floor2_group1_pCylinder13
-    3300004: Room_asset_Floor2_group1_pCylinder14
-    3300006: Room_asset_Floor2_group1_pCylinder15
-    3300008: Room_asset_Floor2_group1_pCylinder16
-    3300010: Room_asset_Floor2_group1_pCylinder17
-    3300012: Room_asset_Floor2_group1_pCylinder18
-    3300014: Room_asset_Floor2_group1_pCylinder19
-    3300016: Room_asset_Floor2_pCylinder12_group1
-    4300000: rect_floor_3_Room_asset_Floor2
-    4300002: Room_asset_Floor2_group1_pCylinder13
-    4300004: Room_asset_Floor2_group1_pCylinder14
-    4300006: Room_asset_Floor2_group1_pCylinder15
-    4300008: Room_asset_Floor2_group1_pCylinder16
-    4300010: Room_asset_Floor2_group1_pCylinder17
-    4300012: Room_asset_Floor2_group1_pCylinder18
-    4300014: Room_asset_Floor2_group1_pCylinder19
-    4300016: Room_asset_Floor2_pCylinder12_group1
+  serializedVersion: 25
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: rect_floor_3_Room_asset_Floor2
+  - first:
+      1: 100002
+    second: Room_asset_Floor2_group1_pCylinder13
+  - first:
+      1: 100004
+    second: Room_asset_Floor2_group1_pCylinder14
+  - first:
+      1: 100006
+    second: Room_asset_Floor2_group1_pCylinder15
+  - first:
+      1: 100008
+    second: Room_asset_Floor2_group1_pCylinder16
+  - first:
+      1: 100010
+    second: Room_asset_Floor2_group1_pCylinder17
+  - first:
+      1: 100012
+    second: Room_asset_Floor2_group1_pCylinder18
+  - first:
+      1: 100014
+    second: Room_asset_Floor2_group1_pCylinder19
+  - first:
+      1: 100016
+    second: Room_asset_Floor2_pCylinder12_group1
+  - first:
+      1: 100018
+    second: //RootNode
+  - first:
+      4: 400000
+    second: rect_floor_3_Room_asset_Floor2
+  - first:
+      4: 400002
+    second: Room_asset_Floor2_group1_pCylinder13
+  - first:
+      4: 400004
+    second: Room_asset_Floor2_group1_pCylinder14
+  - first:
+      4: 400006
+    second: Room_asset_Floor2_group1_pCylinder15
+  - first:
+      4: 400008
+    second: Room_asset_Floor2_group1_pCylinder16
+  - first:
+      4: 400010
+    second: Room_asset_Floor2_group1_pCylinder17
+  - first:
+      4: 400012
+    second: Room_asset_Floor2_group1_pCylinder18
+  - first:
+      4: 400014
+    second: Room_asset_Floor2_group1_pCylinder19
+  - first:
+      4: 400016
+    second: Room_asset_Floor2_pCylinder12_group1
+  - first:
+      4: 400018
+    second: //RootNode
+  - first:
+      21: 2100000
+    second: rect_floor_3_Room_asset_Floor2Mat
+  - first:
+      21: 2100002
+    second: Room_asset_Floor2_group1_pCylinder13Mat
+  - first:
+      21: 2100004
+    second: Room_asset_Floor2_group1_pCylinder14Mat
+  - first:
+      21: 2100006
+    second: Room_asset_Floor2_group1_pCylinder15Mat
+  - first:
+      21: 2100008
+    second: Room_asset_Floor2_group1_pCylinder16Mat
+  - first:
+      21: 2100010
+    second: Room_asset_Floor2_group1_pCylinder17Mat
+  - first:
+      21: 2100012
+    second: Room_asset_Floor2_group1_pCylinder18Mat
+  - first:
+      21: 2100014
+    second: Room_asset_Floor2_group1_pCylinder19Mat
+  - first:
+      21: 2100016
+    second: Room_asset_Floor2_pCylinder12_group1Mat
+  - first:
+      23: 2300000
+    second: rect_floor_3_Room_asset_Floor2
+  - first:
+      23: 2300002
+    second: Room_asset_Floor2_group1_pCylinder13
+  - first:
+      23: 2300004
+    second: Room_asset_Floor2_group1_pCylinder14
+  - first:
+      23: 2300006
+    second: Room_asset_Floor2_group1_pCylinder15
+  - first:
+      23: 2300008
+    second: Room_asset_Floor2_group1_pCylinder16
+  - first:
+      23: 2300010
+    second: Room_asset_Floor2_group1_pCylinder17
+  - first:
+      23: 2300012
+    second: Room_asset_Floor2_group1_pCylinder18
+  - first:
+      23: 2300014
+    second: Room_asset_Floor2_group1_pCylinder19
+  - first:
+      23: 2300016
+    second: Room_asset_Floor2_pCylinder12_group1
+  - first:
+      33: 3300000
+    second: rect_floor_3_Room_asset_Floor2
+  - first:
+      33: 3300002
+    second: Room_asset_Floor2_group1_pCylinder13
+  - first:
+      33: 3300004
+    second: Room_asset_Floor2_group1_pCylinder14
+  - first:
+      33: 3300006
+    second: Room_asset_Floor2_group1_pCylinder15
+  - first:
+      33: 3300008
+    second: Room_asset_Floor2_group1_pCylinder16
+  - first:
+      33: 3300010
+    second: Room_asset_Floor2_group1_pCylinder17
+  - first:
+      33: 3300012
+    second: Room_asset_Floor2_group1_pCylinder18
+  - first:
+      33: 3300014
+    second: Room_asset_Floor2_group1_pCylinder19
+  - first:
+      33: 3300016
+    second: Room_asset_Floor2_pCylinder12_group1
+  - first:
+      43: 4300000
+    second: rect_floor_3_Room_asset_Floor2
+  - first:
+      43: 4300002
+    second: Room_asset_Floor2_group1_pCylinder13
+  - first:
+      43: 4300004
+    second: Room_asset_Floor2_group1_pCylinder14
+  - first:
+      43: 4300006
+    second: Room_asset_Floor2_group1_pCylinder15
+  - first:
+      43: 4300008
+    second: Room_asset_Floor2_group1_pCylinder16
+  - first:
+      43: 4300010
+    second: Room_asset_Floor2_group1_pCylinder17
+  - first:
+      43: 4300012
+    second: Room_asset_Floor2_group1_pCylinder18
+  - first:
+      43: 4300014
+    second: Room_asset_Floor2_group1_pCylinder19
+  - first:
+      43: 4300016
+    second: Room_asset_Floor2_pCylinder12_group1
   externalObjects: {}
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -101,18 +213,19 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -121,10 +234,11 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -134,6 +248,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
