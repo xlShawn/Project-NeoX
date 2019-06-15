@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GunAudio : MonoBehaviour
+public class ButtonPressAudio : MonoBehaviour
 {
-    public AudioClip playerShooting;
+    public AudioClip playerShootingAudio;
 
-    public AudioSource GunAudioSource;
+    public AudioSource playerAudioSource;
 
     // Start is called before the first frame update
     void Start()
     {
-        GunAudioSource.clip = playerShooting;
+        playerAudioSource.clip = playerShootingAudio;
     }
 
     // Update is called once per frame
@@ -19,9 +19,8 @@ public class GunAudio : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            GunAudioSource.clip = playerShooting;
-            GunAudioSource.Play();
+            playerAudioSource.clip = playerShootingAudio;
+            playerAudioSource.Play();
         }
-
     }
 }

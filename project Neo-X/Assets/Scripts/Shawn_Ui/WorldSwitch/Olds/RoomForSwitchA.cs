@@ -9,6 +9,9 @@ public class RoomForSwitchA : MonoBehaviour
     private bool SwitchBetweenFutureAndPast;
     public static bool intoRoom;
 
+    public AudioClip roomSwitchAudio;
+    public AudioSource playerAudioSource;
+
     void Update()
     {
         if(intoRoom == true)
@@ -21,6 +24,10 @@ public class RoomForSwitchA : MonoBehaviour
                     FutureEnvironment.SetActive(false);
                     PastEnvironment.SetActive(true);
                     intoRoom = false;
+
+                    playerAudioSource.clip = roomSwitchAudio;
+                    playerAudioSource.Play();
+                   
                 }
 
             }
