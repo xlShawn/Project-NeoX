@@ -11,28 +11,42 @@ public class RoomForSwitchA : MonoBehaviour
 
     public AudioClip roomSwitchAudio;
     public AudioSource playerAudioSource;
+    public Animator animator;
 
+    void Start()
+    {
+        
+
+    }
     void Update()
     {
-        if(intoRoom == true)
+        if (intoRoom == true)
         {
             if (Input.GetKeyDown(KeyCode.Tab))
             {
-                SwitchBetweenFutureAndPast = !SwitchBetweenFutureAndPast;
-                if (SwitchBetweenFutureAndPast == true)
-                {
-                    FutureEnvironment.SetActive(false);
-                    PastEnvironment.SetActive(true);
-                    intoRoom = false;
-
-                    playerAudioSource.clip = roomSwitchAudio;
-                    playerAudioSource.Play();
-                   
-                }
-
+                Invoke("IntoTheRoom", 1f);
+                animator.SetTrigger("FadeIn");
+                
             }
         }
 
+    }
+
+    void IntoTheRoom()
+    {
+        
+        SwitchBetweenFutureAndPast = !SwitchBetweenFutureAndPast;
+        if (SwitchBetweenFutureAndPast == true)
+        {
+            StartCoroutine(Waiting());
+            FutureEnvironment.SetActive(false);
+            PastEnvironment.SetActive(true);
+            intoRoom = false;
+
+            playerAudioSource.clip = roomSwitchAudio;
+            playerAudioSource.Play();
+
+        }
     }
 
     private void OnTriggerStay(Collider Col)
@@ -52,9 +66,13 @@ public class RoomForSwitchA : MonoBehaviour
     {
         if (intoRoom == true)
         {
-            print("hello");
 
             GUI.Box(new Rect(0, 0, Screen.width / 8f, Screen.height / 40f), "Switch Area");
         }
+    }
+    IEnumerator Waiting()
+    {
+        yield return new WaitForSeconds(2f);
+        print("wait");
     }
 }
