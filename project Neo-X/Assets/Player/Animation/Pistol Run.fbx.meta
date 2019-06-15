@@ -115,9 +115,10 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: eb90ccad4c8614028b1f90957cd9c1b0,
+    type: 3}
   animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
