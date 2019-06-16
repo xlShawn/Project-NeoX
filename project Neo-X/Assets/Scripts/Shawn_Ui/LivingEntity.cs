@@ -12,10 +12,12 @@ public class LivingEntity : MonoBehaviour, IDamageable
     public AudioClip enemyHitAudio;
     public AudioClip enemyDieAudio;
     public AudioSource enemyAudioSource;
+    public Animator animator;
 
     protected virtual void Start()
     {
         health = startingHealth;
+        animator = this.gameObject.GetComponent<Animator>();
     }
 
     public void TakeHit(float damage, RaycastHit hit)
@@ -39,8 +41,9 @@ public class LivingEntity : MonoBehaviour, IDamageable
 
     protected void Die()
     {
+        animator.SetBool("isDead", true);
         dead = true;
-       GameObject.Destroy(gameObject);
+       //GameObject.Destroy(gameObject);
 
     }
 }
