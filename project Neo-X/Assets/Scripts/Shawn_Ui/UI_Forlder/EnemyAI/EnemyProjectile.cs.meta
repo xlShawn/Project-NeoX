@@ -1,13 +1,12 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 4745aa00bcaf3084481bb2fe0f132239
-=======
-guid: 8884c61c6f33d4b8887b924f0d9422a7
->>>>>>> e994c79d321fb145429681a20507b8722f3ef59f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - playerHitAudio: {fileID: 8300000, guid: 8eb01b7c85ff4444a9f1c583de082337, type: 3}
+  - playerAudioSource: {fileID: 2418411099488116405, guid: f9546862129fd4a2db9254073548d0a5,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -9,6 +9,9 @@ public class LivingEntity : MonoBehaviour, IDamageable
     public float health; // it also could be protected, if it doesnt work.
     protected bool dead;
 
+    public AudioClip enemyDieAudio;
+    public AudioSource enemyAudioSource;
+
     protected virtual void Start()
     {
         health = startingHealth;
@@ -20,6 +23,9 @@ public class LivingEntity : MonoBehaviour, IDamageable
 
         if (health <= 0 && !dead)
         {
+            enemyAudioSource.enabled = true;
+            enemyAudioSource.clip = enemyDieAudio;
+            enemyAudioSource.Play();
             Die();
             //FindObjectOfType<GameManager_UI>().EndGame();
             //SceneManager.LoadScene(2);
@@ -29,7 +35,7 @@ public class LivingEntity : MonoBehaviour, IDamageable
     protected void Die()
     {
         dead = true;
-        GameObject.Destroy(gameObject);
-        
+       // GameObject.Destroy(gameObject);
+
     }
 }
