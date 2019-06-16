@@ -43,13 +43,22 @@ public class EnemyProjectile : MonoBehaviour
             target = other.gameObject;
             target.GetComponent<Player>().health -= damage;
             HealthBar.health -= 1f;
-            Destroy(this.gameObject);
+
+
 
             playerAudioSource.enabled = true;
             playerAudioSource.clip = playerHitAudio;
             playerAudioSource.Play();
+
+            Invoke("Des", 1f);
         }
     }
+
+    void Des()
+    {
+        GameObject.Destroy(gameObject);
+    }
+
     //void OnHitObject(RaycastHit hit)
     //{
     //    HealthBar.health -= 1f;

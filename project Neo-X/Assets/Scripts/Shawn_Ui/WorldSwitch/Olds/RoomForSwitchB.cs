@@ -11,6 +11,8 @@ public class RoomForSwitchB : MonoBehaviour
 	
 	public AudioClip roomSwitchAudio;
     public AudioSource playerAudioSource;
+    public AudioClip futureAudio;
+    public AudioSource BackgroundAudioSource;
 
     public Animator animator;
    
@@ -42,6 +44,10 @@ public class RoomForSwitchB : MonoBehaviour
 
             playerAudioSource.clip = roomSwitchAudio;
             playerAudioSource.Play();
+
+            BackgroundAudioSource.enabled = true;
+            BackgroundAudioSource.clip = futureAudio;
+            BackgroundAudioSource.Play();
         }
         intoRoomB = false;
     }
