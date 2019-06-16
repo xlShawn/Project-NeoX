@@ -30,18 +30,17 @@ public class LivingEntity : MonoBehaviour, IDamageable
 
         if (health <= 0 && !dead)
         {
+            Invoke("Die", 2f);
+            animator.SetBool("isDead", true);
             enemyAudioSource.enabled = true;
             enemyAudioSource.clip = enemyDieAudio;
             enemyAudioSource.Play();
-            animator.SetBool("isDead", true);
-            Invoke("Die", 1f);
-            //FindObjectOfType<GameManager_UI>().EndGame();
-            //SceneManager.LoadScene(2);
         }
     }
 
     protected void Die()
-    {  
+    {
+
         dead = true;
         GameObject.Destroy(gameObject);
     }

@@ -22,6 +22,7 @@ public class EnemyAiFollowPath : LivingEntity
     protected override void Start()
     {
         base.Start();
+
         player = GameObject.FindGameObjectWithTag("Player").transform;
         viewAngle = spotlight.spotAngle;
         originalSpotlightColor = spotlight.color;
