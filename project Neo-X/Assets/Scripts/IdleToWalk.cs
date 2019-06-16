@@ -19,6 +19,5 @@ public class IdleToWalk : MonoBehaviour
     {
         inputY = Input.GetAxis("Vertical");
         animator.SetFloat("InputY", -1 * Mathf.Abs(inputY));
-
     }
 }

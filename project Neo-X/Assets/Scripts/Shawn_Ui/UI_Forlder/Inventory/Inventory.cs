@@ -7,6 +7,7 @@ public class Inventory : MonoBehaviour
 {
     private bool inventoryEnabled;
     public GameObject inventory;
+    public bool pause;
 
     private int allSlots;
     private int enabledSlots;
@@ -36,16 +37,27 @@ public class Inventory : MonoBehaviour
         if (inventoryEnabled == true)
         {
             inventory.SetActive(true);
+        }
+        else
+        {
+            inventory.SetActive(false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape)|| Input.GetKeyDown(KeyCode.I))
+        {
+            pause = !pause;
+        }
+
+        if (pause == true)
+        {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
         else
         {
-            inventory.SetActive(false);
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
         }
-
     }
 
     internal void AddItem()

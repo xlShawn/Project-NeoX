@@ -20,14 +20,6 @@ public class Enemy : LivingEntity
     private bool shotReady;
     public float timeToLive;
 
-    //public float speed;
-    //public float stoppingDistance;
-    //public float retreatDistance;
-
-
-    //private float timeBtwShots;
-    //public float startTimeBtwShots;
-
 
     private void OnDrawGizmos() 
     {
