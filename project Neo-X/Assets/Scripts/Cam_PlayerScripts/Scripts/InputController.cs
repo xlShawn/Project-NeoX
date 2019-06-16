@@ -7,7 +7,15 @@ public class InputController : MonoBehaviour
     public float vertical;
     public float horizontal;
     public Vector2 mouseInput;
+    public Animator animator;
+    float inputX;
+    float inputY;
     public bool Fire1;
+
+    void Start() {
+        animator = this.gameObject.GetComponent<Animator>();
+
+    }
 
     void Update() {
         vertical = Input.GetAxis("Vertical");
