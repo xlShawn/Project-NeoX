@@ -42,6 +42,7 @@ public class DialogueManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             DisplayNextSentence();
+            //Animation.Play("DissolveAnimTest");
         }
     }
 
