@@ -11,6 +11,8 @@ public class RoomForSwitchA : MonoBehaviour
 
     public AudioClip roomSwitchAudio;
     public AudioSource playerAudioSource;
+    public AudioClip pastAudio;
+    public AudioSource BackgroundAudioSource;
     public Animator animator;
 
     void Start()
@@ -44,6 +46,10 @@ public class RoomForSwitchA : MonoBehaviour
 
             playerAudioSource.clip = roomSwitchAudio;
             playerAudioSource.Play();
+
+            BackgroundAudioSource.enabled = true;
+            BackgroundAudioSource.clip = pastAudio;
+            BackgroundAudioSource.Play();
 
         }
     }

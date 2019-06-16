@@ -3376,6 +3376,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 5
   health: 0
+  enemyHitAudio: {fileID: 0}
+  enemyDieAudio: {fileID: 0}
+  enemyAudioSource: {fileID: 0}
   pathHolder: {fileID: 3535697994645040308, guid: 47c95f1f650730441ac9b7c47e4684cc,
     type: 3}
   projectile: {fileID: 1075594290413286164, guid: 47c95f1f650730441ac9b7c47e4684cc,
@@ -3419,6 +3422,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 5
   health: 0
+  enemyHitAudio: {fileID: 8300000, guid: 89ce63e649aed404c8533f0aae9aac0c, type: 3}
+  enemyDieAudio: {fileID: 8300000, guid: 8540da146d02e2f458b44ba24009fddf, type: 3}
+  enemyAudioSource: {fileID: 2418411099488116405, guid: f9546862129fd4a2db9254073548d0a5,
+    type: 3}
   speed: 5
   waitTime: 0.3
   turnSpeed: 90
