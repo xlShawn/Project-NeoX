@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Dissolve_test
+  m_Name: Dissolve_NeonField
   m_Shader: {fileID: 4800000, guid: 867272a7036f89e47aca6b49eac0b6c5, type: 3}
   m_ShaderKeywords: _NORMALMAP _OCCLUSIONMAP
   m_LightmapFlags: 4
@@ -109,7 +109,7 @@ Material:
     - Vector1_2E383190: 0
     - Vector1_40C1B45A: 0.831
     - Vector1_86C2B8AB: 0
-    - Vector1_AA2FC16E: 0
+    - Vector1_AA2FC16E: 1
     - Vector1_ACCBD56F: 0
     - Vector1_AF3575E: 0
     - Vector1_BD913078: 0.03
