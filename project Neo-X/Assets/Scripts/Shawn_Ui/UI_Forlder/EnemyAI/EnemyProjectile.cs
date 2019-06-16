@@ -9,6 +9,9 @@ public class EnemyProjectile : MonoBehaviour
     float damage = 1;
     private GameObject target;
 
+    public AudioClip playerHitAudio;
+    public AudioSource playerAudioSource;
+
     public void SetSpeed(float newSpeed)
     {
         speed = newSpeed;
@@ -41,6 +44,10 @@ public class EnemyProjectile : MonoBehaviour
             target.GetComponent<Player>().health -= damage;
             HealthBar.health -= 1f;
             Destroy(this.gameObject);
+
+            playerAudioSource.enabled = true;
+            playerAudioSource.clip = playerHitAudio;
+            playerAudioSource.Play();
         }
     }
     //void OnHitObject(RaycastHit hit)
