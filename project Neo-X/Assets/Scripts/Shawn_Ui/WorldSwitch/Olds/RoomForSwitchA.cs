@@ -26,7 +26,6 @@ public class RoomForSwitchA : MonoBehaviour
             {
                 Invoke("IntoTheRoom", 1f);
                 animator.SetTrigger("FadeIn");
-                
             }
         }
 
