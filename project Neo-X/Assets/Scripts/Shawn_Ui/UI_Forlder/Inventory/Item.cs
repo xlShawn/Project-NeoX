@@ -61,7 +61,11 @@ public class Item : MonoBehaviour
             equipped = true;
         }
 
-
+        if (type == "Key2")
+        {
+            DoorScript.doorKey = true;
+            equipped = true;
+        }
         //weapon
         if (type == "Weapon")
         {
