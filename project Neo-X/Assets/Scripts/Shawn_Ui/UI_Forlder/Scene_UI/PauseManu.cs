@@ -6,35 +6,70 @@ public class PauseManu : MonoBehaviour
 {
 
     public static bool GameIsPaused = false;
-    public GameObject pauseUI;
-     
+    public GameObject InventoryUI;
+    public GameObject pause;
+    public bool pauseMenu;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
             if (GameIsPaused)
             {
-                Resume();
+                Inventory();
             }
             else
             {
-                Pause();
+                InventoryOpen();
             }
         }
 
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            pauseMenu = !pauseMenu;
+
+        }
+
+        if (pauseMenu)
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            Resume();
+        }
+        else
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            Pause();
+        }
+
     }
 
     void Resume()
     {
-        pauseUI.SetActive(false);
+        pause.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+
     }
 
     void Pause()
     {
-        pauseUI.SetActive(true);
+        pause.SetActive(true);
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+    }
+
+    void Inventory()
+    {
+        InventoryUI.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+    }
+
+    void InventoryOpen()
+    {
+        InventoryUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
