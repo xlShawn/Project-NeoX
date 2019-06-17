@@ -886,7 +886,7 @@ PrefabInstance:
     - target: {fileID: 714612686874232457, guid: 44dcd4281049f294dba5d727baeef2c8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Dialogue
+      value: Cutscene_Begin
       objectReference: {fileID: 0}
     - target: {fileID: 714612686962795667, guid: 44dcd4281049f294dba5d727baeef2c8,
         type: 3}

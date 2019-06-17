@@ -18,7 +18,7 @@ public class Skip : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            Application.LoadLevel("Level");
+            Application.LoadLevel("Combined");
         }
     }
 }

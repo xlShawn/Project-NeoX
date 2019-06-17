@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(MoveController))]
 [RequireComponent(typeof(PlayerController))]
@@ -94,6 +95,7 @@ public class Player : LivingEntity /* Health system*/ {
         if(health <= 0)
         {
             Die();
+            SceneManager.LoadScene("Menu");
 
         }
     }
