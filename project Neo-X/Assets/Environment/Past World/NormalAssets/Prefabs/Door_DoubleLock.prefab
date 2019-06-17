@@ -179,13 +179,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5711086392339404896}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.9779577, y: -1.6379966, z: -0.32300425}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.011}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: -0.0014935879, y: -1.1000007, z: 0.6290421}
+  m_LocalScale: {x: 0.010000006, y: 0.01, z: 0.016500005}
   m_Children:
   - {fileID: 2163725176839898990}
   - {fileID: 7167232909857418090}
-  m_Father: {fileID: 4673820558444643760}
+  m_Father: {fileID: 5914749931189216165}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &306673271899476037
@@ -243,7 +243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4673820558444643760}
   m_Layer: 0
-  m_Name: Door_DoubleLock 1
+  m_Name: Door_DoubleLock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -260,7 +260,7 @@ Transform:
   m_LocalPosition: {x: -2.75, y: -1.419825, z: 7.13}
   m_LocalScale: {x: 1, y: 1, z: 1.5}
   m_Children:
-  - {fileID: 8726431299967117939}
+  - {fileID: 5914749931189216165}
   - {fileID: 2244520408160409021}
   - {fileID: 1769663701621374737}
   - {fileID: 6615813411536677562}
@@ -344,6 +344,37 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &8520369141456036245
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5914749931189216165}
+  m_Layer: 0
+  m_Name: Hinge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5914749931189216165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8520369141456036245}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -1.607, y: -0.5379958, z: -0.324}
+  m_LocalScale: {x: 0.6666668, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8726431299967117939}
+  m_Father: {fileID: 4673820558444643760}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &2742011116330926192
 PrefabInstance:
   m_ObjectHideFlags: 0

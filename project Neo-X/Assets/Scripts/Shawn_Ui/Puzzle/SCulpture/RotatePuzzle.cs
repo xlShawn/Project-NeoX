@@ -21,10 +21,16 @@ public class RotatePuzzle : MonoBehaviour
 
     void Update()
     {
-        if (sculpture[0].rotation.y == 0f &&
-            sculpture[1].rotation.y == 0f &&
-            sculpture[2].rotation.y == 0f &&
-            sculpture[3].rotation.y == 0f)
+        print("0: "+ sculpture[0].rotation.z);
+        //print("1: " + sculpture[1].rotation.z);
+        //print("2: " + sculpture[2].rotation.z);
+        //print("3: " + sculpture[3].rotation.z);
+
+
+        if (sculpture[0].rotation.z < 5f && sculpture[0].rotation.z > -5f &&
+            sculpture[1].rotation.z < 5f && sculpture[1].rotation.z > -5f &&
+            sculpture[2].rotation.z < 5f && sculpture[2].rotation.z > -5f &&
+            sculpture[3].rotation.z < 5f && sculpture[3].rotation.z > -5f)
         {
             key.SetActive(true);
         }

@@ -21,10 +21,10 @@ public class MovePainting : MonoBehaviour
 
     void Update()
     {
-        if (painting[0].position.y == 4f &&
-            painting[1].position.y == 4f &&
-            painting[2].position.y == 4f &&
-            painting[3].position.y == 4f)
+        if (painting[0].position.y == -1.766598f &&
+            painting[1].position.y == -1.766598f &&
+            painting[2].position.y == -1.766598f &&
+            painting[3].position.y == -1.766598f)
         {
             key.SetActive(true);
         }

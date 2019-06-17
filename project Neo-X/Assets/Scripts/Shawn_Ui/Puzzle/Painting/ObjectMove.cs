@@ -3,12 +3,15 @@ using UnityEngine;
 
 public class ObjectMove : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject key;
 
     public bool rota;
     public float posX;
     public float posZ;
     private void Start()
     {
+        key.SetActive(false);
         posX = gameObject.transform.position.x;
         posZ = gameObject.transform.position.z;
     }
@@ -19,7 +22,8 @@ public class ObjectMove : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.F))
             {
                 print("sss");
-                transform.position= new Vector3(posX, 4f, posZ);
+                transform.position= new Vector3(posX, -0.05f, posZ);
+                key.SetActive(true);
             }
         }
 
