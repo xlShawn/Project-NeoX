@@ -8,6 +8,9 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(NavMeshAgent))]
 public class Enemy : LivingEntity
 {
+    public AudioClip enemyShootingAudio;
+    public AudioSource EnemyAudioSource;
+
 
     public Transform pathHolder;
     public EnemyProjectile projectile;
@@ -21,15 +24,15 @@ public class Enemy : LivingEntity
     public float timeToLive;
 
 
-    private void OnDrawGizmos() 
+    private void OnDrawGizmos()
     {
         Vector3 startPosition = pathHolder.GetChild(0).position;
         Vector3 previousPosition = startPosition;
-        foreach(Transform waypoint in pathHolder)
+        foreach (Transform waypoint in pathHolder)
         {
             Gizmos.DrawSphere(waypoint.position, 0.3f);
             Gizmos.DrawLine(previousPosition, waypoint.position);
-            previousPosition = waypoint.position; 
+            previousPosition = waypoint.position;
         }
         Gizmos.DrawLine(previousPosition, startPosition);
     }
@@ -40,7 +43,6 @@ public class Enemy : LivingEntity
 
     protected override void Start()
     {
-        
         base.Start();
 
         pathfinder = GetComponent<NavMeshAgent>();
@@ -54,6 +56,7 @@ public class Enemy : LivingEntity
 
     private void Update()
     {
+
         //shooting detecting enemies;
         if (playerLocked)
         {
@@ -67,6 +70,10 @@ public class Enemy : LivingEntity
 
     void Shoot()
     {
+        EnemyAudioSource.clip = enemyShootingAudio;
+        EnemyAudioSource.enabled = true;
+        EnemyAudioSource.Play();
+
         Transform _bullet = Instantiate(projectile.transform, muzzle.transform.position, Quaternion.identity);
         _bullet.transform.rotation = muzzle.transform.rotation;
         shotReady = false;
@@ -83,7 +90,7 @@ public class Enemy : LivingEntity
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if (other.tag == "Player")
         {
             player = other.gameObject;
             playerLocked = true;
@@ -93,17 +100,17 @@ public class Enemy : LivingEntity
     IEnumerator UpdatePath()
     {
         float refreshRate = .25f;
-        
-            while (target != null)
+
+        while (target != null)
+        {
+            Vector3 targetPosition = new Vector3(target.position.x, 0, target.position.z);
+            if (!dead)
             {
-                Vector3 targetPosition = new Vector3(target.position.x, 0, target.position.z);
-                if (!dead)
-                {
-                    pathfinder.SetDestination(targetPosition);
-                }
-                yield return new WaitForSeconds(refreshRate);
+                pathfinder.SetDestination(targetPosition);
             }
-        
-        
+            yield return new WaitForSeconds(refreshRate);
+        }
+
+
     }
 }

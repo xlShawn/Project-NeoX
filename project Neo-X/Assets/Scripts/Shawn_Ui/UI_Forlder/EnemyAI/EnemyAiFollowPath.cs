@@ -10,6 +10,9 @@ public class EnemyAiFollowPath : LivingEntity
     public float waitTime = .3f;
     public float turnSpeed = 90;
 
+    public AudioClip enemyRunningAudio;
+    public AudioSource EnemyRunningSource;
+
     public Light spotlight;
     public float viewDistance;
     public LayerMask viewMask;
@@ -41,7 +44,8 @@ public class EnemyAiFollowPath : LivingEntity
 
     private void Update()
     {
-        
+
+
 
         if (CanSeePlayer())
         {
