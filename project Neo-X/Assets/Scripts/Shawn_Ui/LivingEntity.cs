@@ -38,10 +38,16 @@ public class LivingEntity : MonoBehaviour, IDamageable
         }
     }
 
+
     protected void Die()
     {
-        animator.SetBool("isDead", true);
+        if (animator != null)
+        {
+            animator.SetBool("isDead", true);
+        }
+
         dead = true;
         GameObject.Destroy(gameObject);
     }
 }
+        
