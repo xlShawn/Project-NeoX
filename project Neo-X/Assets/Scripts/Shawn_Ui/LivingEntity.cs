@@ -42,6 +42,6 @@ public class LivingEntity : MonoBehaviour, IDamageable
     {
         animator.SetBool("isDead", true);
         dead = true;
-        //GameObject.Destroy(gameObject);
+        GameObject.Destroy(gameObject);
     }
 }

@@ -15,11 +15,6 @@ public class RoomForSwitchA : MonoBehaviour
     public AudioSource BackgroundAudioSource;
     public Animator animator;
 
-    void Start()
-    {
-        
-
-    }
     void Update()
     {
         if (intoRoom == true)
