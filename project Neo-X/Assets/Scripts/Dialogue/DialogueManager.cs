@@ -39,7 +39,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown("space"))
         {
             DisplayNextSentence();
             //Animation.Play("DissolveAnimTest");
